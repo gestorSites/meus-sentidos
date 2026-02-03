@@ -1,3 +1,5 @@
+import clinicImg from "../../assets/clinic.jpg"
+
 export default function Hero() {
   return (
     <section id="home" className="bg-blue-50 py-20">
@@ -23,10 +25,10 @@ export default function Hero() {
         </div>
 
         <div className="hidden md:block">
-          {/* imagem ilustrativa ou foto da clínica */}
           <img
-            src="/hero-clinica.jpg"
+            src={clinicImg}
             alt="Clínica Meus Sentidos"
+            loading="lazy"
             className="rounded-2xl shadow-lg"
           />
         </div>

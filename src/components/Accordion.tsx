@@ -12,7 +12,6 @@ export default function Accordion({ title, children }: Props) {
 
   return (
     <div className="border rounded-xl overflow-hidden">
-      {/* HEADER */}
       <button
         onClick={() => setOpen(!open)}
         className="w-full flex items-center justify-between px-6 py-4 text-left bg-white hover:bg-gray-50 transition"
@@ -21,7 +20,6 @@ export default function Accordion({ title, children }: Props) {
           {title}
         </span>
 
-        {/* ÍCONE */}
         <span
           className={clsx(
             "transform transition-transform duration-300",
@@ -32,7 +30,6 @@ export default function Accordion({ title, children }: Props) {
         </span>
       </button>
 
-      {/* CONTEÚDO */}
       <div
         className={clsx(
           "grid transition-all duration-300 ease-in-out",

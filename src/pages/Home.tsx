@@ -5,6 +5,8 @@ import { Services } from "../components/Sections/Services";
 import { Highlights } from "../components/Sections/Highlights";
 import { FAQ } from "../components/Sections/Faq";
 import { CTA } from "../components/Sections/Cta";
+import TeamCarousel from "../components/Sections/TeamCarousel";
+import ContactSection from "../components/Sections/ContactSection";
 
 export default function Home() {
     return (
@@ -15,8 +17,10 @@ export default function Home() {
                 <About />
                 <Services />
                 <Highlights />
+                <TeamCarousel />
                 <FAQ />
                 <CTA />
+                <ContactSection />
             </main>
         </>
     )

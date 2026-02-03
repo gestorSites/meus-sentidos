@@ -12,12 +12,20 @@ const menu = [
     { label: "FAQ", id: "faq" },
     { label: "Contato", id: "contato" },
 ]
+const otherLinks = [
+    { label: "Página de Links", href: "/links" },
+    { label: "Blog", href: "/blog" },
+    { label: "Outra Página", href: "/outra" },
+]
+
 
 export default function Header() {
     const [open, setOpen] = useState(false)
     const [scrolled, setScrolled] = useState(false)
 
     const active = useActiveSection(sections)
+    const [openOthers, setOpenOthers] = useState(false)
+    const [openOthersMobile, setOpenOthersMobile] = useState(false)
 
     useEffect(() => {
         const onScroll = () => setScrolled(window.scrollY > 10)
@@ -35,7 +43,6 @@ export default function Header() {
             )}
         >
             <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-                {/* LOGO */}
                 <a
                     href="#home"
                     className="flex items-center gap-3 font-semibold text-blue-900"
@@ -43,12 +50,12 @@ export default function Header() {
                     <img
                         src={logoMeusSentidos}
                         alt="Logo Meus Sentidos"
+                        loading="lazy"
                         className="w-12 h-12 rounded-full object-cover border-2 border-blue-600"
                     />
                     Meus Sentidos
                 </a>
 
-                {/* MENU DESKTOP */}
                 <nav className="hidden md:flex items-center gap-8">
                     {menu.map((item) => {
                         const isActive = active === item.id
@@ -72,6 +79,29 @@ export default function Header() {
                             </a>
                         )
                     })}
+                    <div className="relative">
+                        <button
+                            onClick={() => setOpenOthers(!openOthers)}
+                            className="text-gray-700 hover:text-blue-600 transition-all"
+                        >
+                            Outros
+                        </button>
+
+                        {openOthers && (
+                            <div className="absolute top-full mt-3 right-0 w-48 bg-white rounded-xl shadow-lg border py-2">
+                                {otherLinks.map((link) => (
+                                    <a
+                                        key={link.href}
+                                        href={link.href}
+                                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
+                                    >
+                                        {link.label}
+                                    </a>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+
 
                     <a
                         href="https://wa.me/55XXXXXXXXX"
@@ -82,7 +112,6 @@ export default function Header() {
                     </a>
                 </nav>
 
-                {/* HAMBURGER */}
                 <button
                     onClick={() => setOpen(!open)}
                     className="md:hidden flex flex-col gap-1"
@@ -94,7 +123,6 @@ export default function Header() {
                 </button>
             </div>
 
-            {/* MENU MOBILE */}
             <div
                 className={clsx(
                     "md:hidden overflow-hidden transition-all duration-300 ease-out",
@@ -117,7 +145,32 @@ export default function Header() {
                             {item.label}
                         </a>
                     ))}
+                    <div>
+                        <button
+                            onClick={() => setOpenOthersMobile(!openOthersMobile)}
+                            className="w-full flex justify-between items-center font-medium text-gray-700"
+                        >
+                            Outros
+                            <span className={clsx("transition", openOthersMobile && "rotate-180")}>
+                                ▾
+                            </span>
+                        </button>
 
+                        {openOthersMobile && (
+                            <div className="mt-2 ml-4 flex flex-col gap-2">
+                                {otherLinks.map((link) => (
+                                    <a
+                                        key={link.href}
+                                        href={link.href}
+                                        onClick={() => setOpen(false)}
+                                        className="text-sm text-gray-600 hover:text-blue-600 transition"
+                                    >
+                                        {link.label}
+                                    </a>
+                                ))}
+                            </div>
+                        )}
+                    </div>
                     <a
                         href="https://wa.me/55XXXXXXXXX"
                         target="_blank"

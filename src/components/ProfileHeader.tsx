@@ -10,6 +10,7 @@ export default function ProfileHeader() {
         <img
           src={logoMeusSentidos}
           alt="Logo Meus Sentidos"
+          loading="lazy"
           className="relative w-24 h-24 rounded-full bg-white object-cover border-4 border-white shadow"
         />
       </div>
