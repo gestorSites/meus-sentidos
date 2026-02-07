@@ -15,7 +15,7 @@ export default function TeamCard({ name, role, description, image }: TeamCardPro
         className="w-24 h-24 mx-auto rounded-full object-cover mb-4"
       />
 
-      <h3 className="font-semibold text-blue-900">{name}</h3>
+      <h3 className="font-semibold text-[#1177E3]">{name}</h3>
       <p className="text-sm text-blue-600 mb-2">{role}</p>
 
       <p className="text-sm text-gray-600">

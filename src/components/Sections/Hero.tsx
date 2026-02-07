@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
         <div>
-          <h1 className="text-4xl md:text-5xl font-bold text-blue-900 leading-tight">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#1177E3] leading-tight">
             Cuidado especializado para crianças e adolescentes com TEA
           </h1>
 

@@ -10,7 +10,7 @@ export default function ContactSection() {
         <div className="grid md:grid-cols-2 gap-12 items-start">
 
           <div>
-            <h2 className="text-3xl font-semibold text-blue-900 mb-4">
+            <h2 className="text-3xl font-semibold text-[#1177E3] mb-4">
               Entre em contato
             </h2>
 

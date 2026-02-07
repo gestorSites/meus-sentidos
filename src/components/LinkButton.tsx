@@ -18,24 +18,37 @@ export default function LinkButton({
     <a
       href={href}
       target="_blank"
+      rel="noopener noreferrer"
       className={clsx(
-        "w-full flex items-center justify-center gap-3 py-4 px-6 rounded-full font-medium",
-        "transition-all duration-200",
-        "hover:-translate-y-0.5 hover:shadow-md active:translate-y-0",
+        `
+          w-full h-14
+          flex items-center justify-center gap-3
+          rounded-xl
+          font-medium
+          transition-all duration-200
+          focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2
+        `,
         {
-          "bg-sky-600 text-white hover:bg-sky-700":
+          // BOTÃO PRINCIPAL
+          "bg-[#1177E3] text-white hover:bg-[#1177E3]/90 shadow-sm":
             variant === "primary",
 
-          "bg-violet-400 text-sky-900 hover:bg-violet-500":
+          // BOTÃO DE DESTAQUE SUAVE
+          "bg-[#5E3583] text-white hover:bg-[#5E3583]/90 shadow-sm":
             variant === "secondary",
 
-          "border border-sky-600 text-sky-600 hover:bg-sky-600 hover:text-white":
+          // BOTÃO NEUTRO (bio.site style)
+          "border border-gray-200 text-gray-700 hover:bg-gray-50":
             variant === "outline",
         }
       )}
     >
-      {icon && <span className="flex items-center">{icon}</span>}
+      {icon && (
+        <span className="flex items-center text-current">
+          {icon}
+        </span>
+      )}
       <span>{label}</span>
-    </a>
+    </a >
   )
 }

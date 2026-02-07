@@ -5,11 +5,11 @@ const highlights = [
   "Ambiente acolhedor e seguro",
 ]
 
-export function Highlights() {
+export default function Highlights() {
   return (
     <section id="destaques" className="py-20 scroll-mt-24">
       <div className="max-w-5xl mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center text-blue-900 mb-12">
+        <h2 className="text-3xl font-bold text-center text-[#1177E3] mb-12">
           Por que escolher a Meus Sentidos?
         </h2>
 

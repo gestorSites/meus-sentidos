@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation, Autoplay } from "swiper/modules"
 import personImg from "../../assets/person.jpg"
+import franciellyImg from "../../assets/francielly.png"
 
 import "swiper/css"
 import "swiper/css/navigation"
@@ -9,11 +10,23 @@ import TeamCard from "../TeamCard"
 
 const team = [
   {
-    name: "Dra. Ana Silva",
-    role: "Psicóloga Infantil",
-    description:
-      "Especialista em TEA, com mais de 10 anos de experiência no atendimento de crianças e adolescentes.",
-    image: personImg,
+    name: "Francielly Caroline",
+    role: "Crefito 3/16383 TO",
+    description: `Terapeuta Ocupacional graduada pela Universidade de São
+Paulo – USP.
+Mestre pela USP de Ribeirão Preto.
+Especialista em Neurociências pela UNIFESP.
+Especialista em Reabilitação Aplicada à Neurologia pela
+UNICAMP.
+Certificação Internacional em Integração Sensorial de Ayres.
+Diretora da Clínica Meus Sentidos – Terapias Integradas.
+Terapeuta Ocupacional do Programa de Alta Performance do
+Magazine Luiza, atuando na inclusão e desenvolvimento de
+pessoas com deficiência(PCD) no ambiente de trabalho.
+Atuação clínica, institucional e empresarial baseada em
+evidências científicas, com foco em funcionalidade,
+    autonomia e inclusão.`,
+    image: franciellyImg,
   },
   {
     name: "João Pereira",

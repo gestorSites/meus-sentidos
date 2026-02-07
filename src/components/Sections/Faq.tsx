@@ -1,6 +1,6 @@
 import Accordion from "../Accordion"
 
-export function FAQ() {
+export default function FAQ() {
   const faqs = [
     {
       title: "O que é o TEA?",
@@ -21,7 +21,7 @@ export function FAQ() {
   return (
     <section id="faq" className="bg-gray-50 py-20 scroll-mt-24">
       <div className="max-w-4xl mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center text-blue-900 mb-12">
+        <h2 className="text-3xl font-bold text-center text-[#1177E3] mb-12">
           Perguntas Frequentes
         </h2>
 

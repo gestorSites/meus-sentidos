@@ -1,4 +1,4 @@
-export function CTA() {
+export default function CTA() {
   return (
     <section id="contato" className="bg-blue-600 py-16 text-center text-white scroll-mt-24">
       <h2 className="text-3xl font-bold">

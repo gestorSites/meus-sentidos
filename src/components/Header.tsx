@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import clsx from "clsx"
 import logoMeusSentidos from "../assets/logoMeusSentidos.jpg"
 import { useActiveSection } from "../hooks/useActiveSection"
+import { ChevronDown } from "lucide-react"
 
 const sections = ["home", "sobre", "servicos", "faq", "contato"]
 
@@ -24,7 +25,6 @@ export default function Header() {
     const [scrolled, setScrolled] = useState(false)
 
     const active = useActiveSection(sections)
-    const [openOthers, setOpenOthers] = useState(false)
     const [openOthersMobile, setOpenOthersMobile] = useState(false)
 
     useEffect(() => {
@@ -45,7 +45,7 @@ export default function Header() {
             <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
                 <a
                     href="#home"
-                    className="flex items-center gap-3 font-semibold text-blue-900"
+                    className="flex items-center gap-3 font-semibold text-[#1177E3]"
                 >
                     <img
                         src={logoMeusSentidos}
@@ -79,28 +79,42 @@ export default function Header() {
                             </a>
                         )
                     })}
-                    <div className="relative">
-                        <button
-                            onClick={() => setOpenOthers(!openOthers)}
-                            className="text-gray-700 hover:text-blue-600 transition-all"
-                        >
-                            Outros
-                        </button>
+                    <div className="relative group">
+                        <div className="flex items-center gap-1 cursor-pointer text-gray-700 hover:text-blue-600 transition-all">
+                            <span>Outros</span>
 
-                        {openOthers && (
-                            <div className="absolute top-full mt-3 right-0 w-48 bg-white rounded-xl shadow-lg border py-2">
-                                {otherLinks.map((link) => (
-                                    <a
-                                        key={link.href}
-                                        href={link.href}
-                                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
-                                    >
-                                        {link.label}
-                                    </a>
-                                ))}
-                            </div>
-                        )}
+                            <span
+                                className="
+                text-xs
+                transition-transform duration-200
+                group-hover:rotate-180
+            "
+                            >
+                                <ChevronDown size={16} />
+                            </span>
+                        </div>
+
+                        <div
+                            className="
+            absolute top-full mt-3 right-0 w-48
+            bg-white rounded-xl shadow-lg border py-2
+            opacity-0 invisible translate-y-2
+            group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
+            transition-all duration-200
+        "
+                        >
+                            {otherLinks.map((link) => (
+                                <a
+                                    key={link.href}
+                                    href={link.href}
+                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
+                                >
+                                    {link.label}
+                                </a>
+                            ))}
+                        </div>
                     </div>
+
 
 
                     <a
@@ -117,9 +131,9 @@ export default function Header() {
                     className="md:hidden flex flex-col gap-1"
                     aria-label="Abrir menu"
                 >
-                    <span className="w-6 h-0.5 bg-blue-900" />
-                    <span className="w-6 h-0.5 bg-blue-900" />
-                    <span className="w-6 h-0.5 bg-blue-900" />
+                    <span className="w-6 h-0.5 bg-[#1177E3]" />
+                    <span className="w-6 h-0.5 bg-[#1177E3]" />
+                    <span className="w-6 h-0.5 bg-[#1177E3]" />
                 </button>
             </div>
 
