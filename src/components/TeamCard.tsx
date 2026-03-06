@@ -1,11 +1,11 @@
 type TeamCardProps = {
   name: string
   role: string
-  description: string
+  description?: string
   image: string
 }
 
-export default function TeamCard({ name, role, description, image }: TeamCardProps) {
+export default function TeamCard({ name, role, image }: TeamCardProps) {
   return (
     <div className="bg-white rounded-xl shadow p-6 text-center h-full">
       <img
@@ -18,9 +18,9 @@ export default function TeamCard({ name, role, description, image }: TeamCardPro
       <h3 className="font-semibold text-[#1177E3]">{name}</h3>
       <p className="text-sm text-blue-600 mb-2">{role}</p>
 
-      <p className="text-sm text-gray-600">
+      {/* <p className="text-sm text-gray-600">
         {description}
-      </p>
+      </p> */}
     </div>
   )
 }

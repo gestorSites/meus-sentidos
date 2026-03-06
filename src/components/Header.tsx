@@ -1,20 +1,21 @@
 import { useEffect, useState } from "react"
 import clsx from "clsx"
-import logoMeusSentidos from "../assets/logoMeusSentidos.jpg"
+import logoMeusSentidos2 from "../assets/logoMSM.png"
 import { useActiveSection } from "../hooks/useActiveSection"
 import { ChevronDown } from "lucide-react"
 
-const sections = ["home", "sobre", "servicos", "faq", "contato"]
+const sections = ["", "sobre", "especialidades", "profissionais", "faq", "contato"]
 
 const menu = [
-    { label: "Início", id: "home" },
-    { label: "Sobre", id: "sobre" },
-    { label: "Serviços", id: "servicos" },
+    { label: "Início", id: "" },
+    { label: "Historia", id: "sobre" },
+    { label: "Especialidades", id: "especialidades" },
+    { label: "Profissionais", id: "profissionais" },
     { label: "FAQ", id: "faq" },
     { label: "Contato", id: "contato" },
 ]
 const otherLinks = [
-    { label: "Página de Links", href: "/links" },
+    { label: "Página de Links", href: "/links", blank: true },
     { label: "Blog", href: "/blog" },
     { label: "Outra Página", href: "/outra" },
 ]
@@ -42,18 +43,18 @@ export default function Header() {
                     : "bg-white/70 backdrop-blur"
             )}
         >
+            <div className="h-[4px] w-full bg-gradient-to-r from-[#F2D13D] via-[#5BC0EB] to-[#0B3C49]" />
             <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
                 <a
                     href="#home"
                     className="flex items-center gap-3 font-semibold text-[#1177E3]"
                 >
                     <img
-                        src={logoMeusSentidos}
+                        src={logoMeusSentidos2}
                         alt="Logo Meus Sentidos"
                         loading="lazy"
-                        className="w-12 h-12 rounded-full object-cover border-2 border-blue-600"
+                        className="h-10 object-cover"
                     />
-                    Meus Sentidos
                 </a>
 
                 <nav className="hidden md:flex items-center gap-8">
@@ -107,6 +108,7 @@ export default function Header() {
                                 <a
                                     key={link.href}
                                     href={link.href}
+                                    target={link.blank ? '_blank' : '_self'}
                                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
                                 >
                                     {link.label}
@@ -118,7 +120,7 @@ export default function Header() {
 
 
                     <a
-                        href="https://wa.me/55XXXXXXXXX"
+                        href="https://wa.me/5516992832613"
                         target="_blank"
                         className="px-5 py-2 rounded-full bg-blue-600 text-white text-sm hover:bg-blue-700 transition"
                     >
@@ -186,7 +188,7 @@ export default function Header() {
                         )}
                     </div>
                     <a
-                        href="https://wa.me/55XXXXXXXXX"
+                        href="https://wa.me/5516992832613"
                         target="_blank"
                         className="mt-2 px-5 py-3 text-center rounded-full bg-blue-600 text-white font-medium"
                     >

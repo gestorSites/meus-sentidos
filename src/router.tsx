@@ -3,6 +3,8 @@ import Home from "./pages/Home";
 import Links from "./pages/Links";
 import MainLayout from "./layouts/MainLayout";
 import NotFound from "./pages/NotFound";
+import Especialidade from "./pages/Especialidade";
+import Profissionais from "./pages/Profissionais";
 
 export const router = createBrowserRouter([
   {
@@ -14,10 +16,23 @@ export const router = createBrowserRouter([
         index: true,
         element: <Home />,
       },
+      {
+        path: "especialidades/:slug",
+        element: <Especialidade />,
+      },
+      {
+        path: "profissionais/:slug",
+        element: <Profissionais />,
+      },
     ],
   },
   {
     path: "/links",
+    element: <Links />,
+    errorElement: <NotFound />,
+  },
+  {
+    path: "/profissionais",
     element: <Links />,
     errorElement: <NotFound />,
   },

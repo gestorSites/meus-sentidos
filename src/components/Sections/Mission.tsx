@@ -23,7 +23,7 @@ const items = [
 
 export default function MissionVisionValues() {
   return (
-    <section className="bg-white py-20">
+    <section className="bg-blue-50 py-20">
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-center text-[#1177E3] mb-12">
           Missão, Visão e Valores

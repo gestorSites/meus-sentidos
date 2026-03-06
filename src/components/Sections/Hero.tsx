@@ -1,4 +1,5 @@
 import clinicImg from "../../assets/clinic.jpg"
+import Reveal from "../Reveal"
 
 export default function Hero() {
   return (
@@ -6,22 +7,28 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
         <div>
-          <h1 className="text-4xl md:text-5xl font-bold text-[#1177E3] leading-tight">
-            Cuidado especializado para crianças e adolescentes com TEA
-          </h1>
+          <Reveal>
+            <h1 className="text-xl md:text-2xl font-bold text-[#1177E3] leading-tight">
+              Cuidado especializado para crianças e adolescentes com TEA
+            </h1>
+          </Reveal>
 
-          <p className="mt-6 text-lg text-gray-700">
-            A Clínica Meus Sentidos oferece atendimento humanizado, individualizado
-            e baseado em evidências.
-          </p>
+          <Reveal delay={0.2}>
+            <p className="mt-6 text-lg text-gray-700">
+              A Clínica Meus Sentidos oferece atendimento humanizado,
+              individualizado e baseado em evidências.
+            </p>
+          </Reveal>
 
-          <a
-            href="https://wa.me/55XXXXXXXXX"
-            target="_blank"
-            className="inline-flex items-center gap-3 mt-8 px-8 py-4 rounded-full bg-blue-600 text-white font-medium hover:bg-blue-700 transition"
-          >
-            Falar no WhatsApp
-          </a>
+          <Reveal delay={0.4}>
+            <a
+              href="https://wa.me/5516992832613"
+              target="_blank"
+              className="inline-flex items-center gap-3 mt-8 px-8 py-3 rounded-full bg-blue-600 text-white font-medium hover:bg-blue-700 transition"
+            >
+              Falar com nossa equipe
+            </a>
+          </Reveal>
         </div>
 
         <div className="hidden md:block">
