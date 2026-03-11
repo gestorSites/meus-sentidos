@@ -10,6 +10,8 @@ import logoMeusSentidos2 from "../assets/logoMSM.png"
 export default function Footer() {
   return (
     <footer className="bg-white">
+      <div className="h-[8px] w-full bg-gradient-to-r from-[#F2D13D] via-[#5BC0EB] to-[#0B3C49]" />
+
       <div className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-12 text-gray-700">
 
         {/* COLUNA 1 - SOBRE */}

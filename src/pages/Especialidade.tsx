@@ -1,20 +1,20 @@
 import { useParams } from "react-router-dom"
-import { especialidades } from "../data/especialidades"
+import { especialidades, type EspecialidadeSlug } from "../data/especialidades"
+import Reveal from "../components/Reveal"
 
 
 export default function EspecialidadePage() {
 
-  const { slug } = useParams()
+  const { slug } = useParams<{ slug: EspecialidadeSlug }>()
 
-  const especialidade =
-    slug ? especialidades[slug as keyof typeof especialidades] : null
+  const especialidade = slug ? especialidades[slug] : undefined
 
   if (!especialidade) {
     return <div className="p-10 text-center">Especialidade não encontrada</div>
   }
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-16 space-y-20">
+    <div className="max-w-6xl mx-auto px-6 py-20 space-y-20">
 
       {/* SEÇÃO 1 */}
 
@@ -25,9 +25,11 @@ export default function EspecialidadePage() {
             {especialidade.titulo}
           </h1>
 
-          <h2 className="text-xl text-gray-600 mb-6">
-            {especialidade.subtitulo}
-          </h2>
+          {especialidade.subtitulo && (
+            <h2 className="text-2xl font-semibold mb-6 text-gray-700">
+              {especialidade.subtitulo}
+            </h2>
+          )}
 
           <p className="text-gray-700 leading-relaxed">
             {especialidade.descricao}
@@ -36,12 +38,14 @@ export default function EspecialidadePage() {
 
         <div className="grid grid-cols-2 gap-4">
           {especialidade.imagens.map((img, i) => (
-            <img
-              key={i}
-              src={img}
-              loading="lazy"
-              className="rounded-xl object-cover h-40 w-full"
-            />
+            <Reveal key={slug} delay={i * 0.06}>
+              <img
+                key={i}
+                src={img}
+                loading="lazy"
+                className="rounded-xl object-cover h-40 w-full"
+              />
+            </Reveal>
           ))}
         </div>
 
@@ -49,19 +53,19 @@ export default function EspecialidadePage() {
 
       {/* SEÇÃO 2 */}
 
-      <section>
+      {especialidade.beneficios && (
+        <section>
+          <h2 className="text-3xl font-bold mb-6">
+            {especialidade.beneficiosTitulo || "Benefícios"}
+          </h2>
 
-        <h3 className="text-3xl font-semibold mb-6">
-          {especialidade.beneficiosTitulo}
-        </h3>
-
-        <ul className="space-y-3 list-disc list-inside text-gray-700">
-          {especialidade.beneficios.map((item, i) => (
-            <li key={i}>{item}</li>
-          ))}
-        </ul>
-
-      </section>
+          <ul className="list-disc list-inside space-y-2 text-gray-700">
+            {especialidade.beneficios.map((beneficio, i) => (
+              <li key={i}>{beneficio}</li>
+            ))}
+          </ul>
+        </section>
+      )}
 
     </div>
   )

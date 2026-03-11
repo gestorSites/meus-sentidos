@@ -5,7 +5,6 @@ import Services from "../components/Sections/Services";
 import FAQ from "../components/Sections/Faq";
 import TeamCarousel from "../components/Sections/TeamCarousel";
 import ContactSection from "../components/Sections/ContactSection";
-import Footer from "../components/Footer";
 
 export default function Home() {
     return (
@@ -18,7 +17,6 @@ export default function Home() {
                 <TeamCarousel />
                 <FAQ />
                 <ContactSection />
-                <Footer />
             </main>
         </>
     )

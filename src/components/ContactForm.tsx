@@ -8,7 +8,7 @@ export default function ContactForm() {
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
 
-    const phone = "5516999004420" // troque pelo número real (DDD + número)
+    const phone = "5516992832613" // troque pelo número real (DDD + número)
 
     const text = `
 Olá! Gostaria de entrar em contato

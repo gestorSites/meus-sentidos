@@ -1,5 +1,6 @@
 import Accordion from "../Accordion"
 import atendimento from "../../assets/atendimentoInf.jpg"
+import Reveal from "../Reveal"
 
 export default function FAQ() {
   const faqs = [
@@ -50,12 +51,14 @@ export default function FAQ() {
 
           {/* ACCORDION */}
           <div className="space-y-4">
-            {faqs.map((item) => (
-              <Accordion key={item.title} title={item.title}>
-                <p className="text-gray-600 leading-relaxed">
-                  {item.content}
-                </p>
-              </Accordion>
+            {faqs.map((item, i) => (
+              <Reveal key={item.title} delay={i * 0.06}>
+                <Accordion key={item.title} title={item.title}>
+                  <p className="text-gray-600 leading-relaxed">
+                    {item.content}
+                  </p>
+                </Accordion>
+              </Reveal>
             ))}
           </div>
 

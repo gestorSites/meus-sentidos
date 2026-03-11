@@ -3,25 +3,40 @@ import clsx from "clsx"
 import logoMeusSentidos2 from "../assets/logoMSM.png"
 import { useActiveSection } from "../hooks/useActiveSection"
 import { ChevronDown } from "lucide-react"
+import { useLocation } from "react-router-dom"
 
-const sections = ["", "sobre", "especialidades", "profissionais", "faq", "contato"]
+const sections = ["home", "sobre", "especialidades", "profissionais", "faq", "contato"]
 
 const menu = [
-    { label: "Início", id: "" },
+    { label: "Início", id: "home" },
     { label: "Historia", id: "sobre" },
-    { label: "Especialidades", id: "especialidades" },
     { label: "Profissionais", id: "profissionais" },
     { label: "FAQ", id: "faq" },
     { label: "Contato", id: "contato" },
+    { label: "Avaliações", href: "/avaliacoes" }
 ]
-const otherLinks = [
-    { label: "Página de Links", href: "/links", blank: true },
-    { label: "Blog", href: "/blog" },
-    { label: "Outra Página", href: "/outra" },
+const specialties = [
+    { label: "Psicologia", href: "/especialidades/psicologia" },
+    { label: "ABA", href: "/especialidades/aba" },
+    { label: "Acompanhamento Terapêutico", href: "/especialidades/acompanhamento-terapeutico" },
+    { label: "Fonoaudiologia", href: "/especialidades/fonoaudiologia" },
+    { label: "Laserterapia", href: "/especialidades/laserterapia" },
+    { label: "Neuromodulação", href: "/especialidades/neuromodulacao" },
+    { label: "Neuropsicopedagogia", href: "/especialidades/neuropsicopedagogia" },
+    { label: "Reforço Escolar", href: "/especialidades/reforco-escolar" },
+    { label: "Terapia Ocupacional", href: "/especialidades/terapia-ocupacional" },
+    { label: "Integração Sensorial de Ayres", href: "/especialidades/integracao-sensorial" },
+    { label: "Fisioterapia", href: "/especialidades/fisioterapia" },
+    { label: "Pilates", href: "/especialidades/pilates" },
+    { label: "Terapia Aquática", href: "/especialidades/terapia-aquatica" },
+    { label: "Educação Física", href: "/especialidades/educacao-fisica" },
+    { label: "Musculação", href: "/especialidades/musculacao" },
+    { label: "Musicoterapia", href: "/especialidades/musicoterapia" },
 ]
 
 
 export default function Header() {
+    const location = useLocation()
     const [open, setOpen] = useState(false)
     const [scrolled, setScrolled] = useState(false)
 
@@ -43,7 +58,7 @@ export default function Header() {
                     : "bg-white/70 backdrop-blur"
             )}
         >
-            <div className="h-[4px] w-full bg-gradient-to-r from-[#F2D13D] via-[#5BC0EB] to-[#0B3C49]" />
+            <div className="h-[6px] w-full bg-gradient-to-r from-[#F2D13D] via-[#5BC0EB] to-[#0B3C49]" />
             <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
                 <a
                     href="#home"
@@ -59,12 +74,18 @@ export default function Header() {
 
                 <nav className="hidden md:flex items-center gap-8">
                     {menu.map((item) => {
-                        const isActive = active === item.id
+                        const isActive = item.id && active === item.id
 
                         return (
                             <a
-                                key={item.id}
-                                href={`#${item.id}`}
+                                key={item.label}
+                                href={
+                                    item.href
+                                        ? item.href
+                                        : location.pathname === "/"
+                                            ? `#${item.id}`
+                                            : `/#${item.id}`
+                                }
                                 className={clsx(
                                     "relative transition-all duration-200",
                                     isActive
@@ -82,7 +103,7 @@ export default function Header() {
                     })}
                     <div className="relative group">
                         <div className="flex items-center gap-1 cursor-pointer text-gray-700 hover:text-blue-600 transition-all">
-                            <span>Outros</span>
+                            <span>Especialidades</span>
 
                             <span
                                 className="
@@ -97,18 +118,18 @@ export default function Header() {
 
                         <div
                             className="
-            absolute top-full mt-3 right-0 w-48
+            absolute top-full mt-3 right-0 w-96 grid grid-cols-2
             bg-white rounded-xl shadow-lg border py-2
             opacity-0 invisible translate-y-2
             group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
             transition-all duration-200
         "
                         >
-                            {otherLinks.map((link) => (
+                            {specialties.map((link) => (
                                 <a
                                     key={link.href}
                                     href={link.href}
-                                    target={link.blank ? '_blank' : '_self'}
+                                    target='_self'
                                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
                                 >
                                     {link.label}
@@ -142,14 +163,20 @@ export default function Header() {
             <div
                 className={clsx(
                     "md:hidden overflow-hidden transition-all duration-300 ease-out",
-                    open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                    open ? "max-h-[80vh] opacity-100 overflow-y-auto" : "max-h-0 opacity-0 overflow-hidden"
                 )}
             >
                 <nav className="bg-white border-t px-6 py-4 flex flex-col gap-4">
                     {menu.map((item) => (
                         <a
                             key={item.id}
-                            href={`#${item.id}`}
+                            href={
+                                item.href
+                                    ? item.href
+                                    : location.pathname === "/"
+                                        ? `#${item.id}`
+                                        : `/#${item.id}`
+                            }
                             onClick={() => setOpen(false)}
                             className={clsx(
                                 "font-medium transition",
@@ -166,7 +193,7 @@ export default function Header() {
                             onClick={() => setOpenOthersMobile(!openOthersMobile)}
                             className="w-full flex justify-between items-center font-medium text-gray-700"
                         >
-                            Outros
+                            Especialidades
                             <span className={clsx("transition", openOthersMobile && "rotate-180")}>
                                 ▾
                             </span>
@@ -174,7 +201,7 @@ export default function Header() {
 
                         {openOthersMobile && (
                             <div className="mt-2 ml-4 flex flex-col gap-2">
-                                {otherLinks.map((link) => (
+                                {specialties.map((link) => (
                                     <a
                                         key={link.href}
                                         href={link.href}

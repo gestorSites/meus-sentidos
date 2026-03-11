@@ -31,7 +31,7 @@ export default function About() {
           <div className="space-y-8">
 
             <div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">
+              <h3 className="text-xl font-semibold text-[#1177E3] mb-3">
                 Um propósito que nasceu do cuidado
               </h3>
               <p className="text-gray-600 leading-relaxed">
@@ -43,7 +43,7 @@ export default function About() {
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">
+              <h3 className="text-xl font-semibold text-[#1177E3] mb-3">
                 Atendimento integrado em um só lugar
               </h3>
               <p className="text-gray-600 leading-relaxed">
@@ -55,7 +55,7 @@ export default function About() {
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">
+              <h3 className="text-xl font-semibold text-[#1177E3] mb-3">
                 Crescimento com essência
               </h3>
               <p className="text-gray-600 leading-relaxed">

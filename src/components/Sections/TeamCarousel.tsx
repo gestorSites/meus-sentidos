@@ -324,7 +324,7 @@ Aplicadora ABA pelo Instituto Neuro.
 
 export default function TeamCarousel() {
   return (
-    <section id="profissionais" className="bg-blue-50 py-20 scroll-mt-24">
+    <section id="profissionais" className="bg-red-50 py-20 scroll-mt-24">
       <h2 className="text-3xl font-bold text-center text-[#1177E3] mb-12">
         Profissionais
       </h2>

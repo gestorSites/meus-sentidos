@@ -1,43 +1,33 @@
+import { Link } from "react-router-dom"
 import {
   Brain,
   MessageCircle,
   Sparkles,
   Activity,
   Dumbbell,
+  Waves,
+  Music,
+  Zap,
 } from "lucide-react"
+import Reveal from "../Reveal"
 
 const specialties = [
-  {
-    title: "Desenvolvimento e Comportamento",
-    icon: Brain,
-    items: ["Psicologia", "ABA", "Acompanhamento Terapêutico"],
-  },
-  {
-    title: "Comunicação e Aprendizagem",
-    icon: MessageCircle,
-    items: ["Fonoaudiologia", "Neuropsicopedagogia", "Reforço Escolar"],
-  },
-  {
-    title: "Terapias Integrativas",
-    icon: Sparkles,
-    items: [
-      "Terapia Ocupacional",
-      "Integração de Ayres",
-      "Fisioterapia",
-      "Pilates",
-      "Terapia Aquática",
-    ],
-  },
-  {
-    title: "Recursos Terapêuticos",
-    icon: Activity,
-    items: ["Laserterapia", "Neuromodulação", "Musicoterapia"],
-  },
-  {
-    title: "Movimento e Saúde",
-    icon: Dumbbell,
-    items: ["Educação Física", "Musculação"],
-  },
+  { title: "Psicologia", slug: "psicologia", icon: Brain },
+  { title: "ABA – Análise do Comportamento Aplicada", slug: "aba", icon: Activity },
+  { title: "Acompanhamento Terapêutico (AT)", slug: "acompanhamento-terapeutico", icon: Zap },
+  { title: "Fonoaudiologia", slug: "fonoaudiologia", icon: MessageCircle },
+  { title: "Laserterapia", slug: "laserterapia", icon: Sparkles },
+  { title: "Neuromodulação", slug: "neuromodulacao", icon: Zap },
+  { title: "Neuropsicopedagogia", slug: "neuropsicopedagogia", icon: Brain },
+  { title: "Reforço Escolar", slug: "reforco-escolar", icon: Brain },
+  { title: "Terapia Ocupacional", slug: "terapia-ocupacional", icon: Activity },
+  { title: "Integração Sensorial de Ayres", slug: "integracao-sensorial", icon: Activity },
+  { title: "Fisioterapia", slug: "fisioterapia", icon: Activity },
+  { title: "Pilates", slug: "pilates", icon: Dumbbell },
+  { title: "Terapia Aquática", slug: "terapia-aquatica", icon: Waves },
+  { title: "Educação Física", slug: "educacao-fisica", icon: Dumbbell },
+  { title: "Musculação", slug: "musculacao", icon: Dumbbell },
+  { title: "Musicoterapia", slug: "musicoterapia", icon: Music },
 ]
 
 export default function Services() {
@@ -49,30 +39,23 @@ export default function Services() {
           Especialidades
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {specialties.map(({ title, icon: Icon, items }) => (
-            <div
-              key={title}
-              className="bg-white p-8 rounded-2xl shadow hover:shadow-lg transition-all duration-300"
-            >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-14 h-14 rounded-full bg-blue-100 text-[#1177E3] flex items-center justify-center text-center">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {specialties.map(({ title, slug, icon: Icon }, index) => (
+            <Reveal key={slug} delay={index * 0.03}>
+              <Link
+                key={slug}
+                to={`/especialidades/${slug}`}
+                className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col items-center text-center"
+              >
+                <div className="w-14 h-14 rounded-full bg-blue-100 text-[#1177E3] flex items-center justify-center mb-4">
                   <Icon size={26} />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-800">
+
+                <h3 className="text-sm font-semibold text-gray-800">
                   {title}
                 </h3>
-              </div>
-
-              <ul className="space-y-2 text-gray-600 text-center items-center">
-                {items.map((item) => (
-                  <li key={item} className="flex items-center gap-2">
-                    <span className="mt-1 w-1.5 h-1.5 bg-[#1177E3] rounded-full" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
+              </Link>
+            </Reveal>
           ))}
         </div>
 
