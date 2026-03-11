@@ -6,6 +6,7 @@ export type Especialidade = {
   beneficiosTitulo?: string
   beneficios?: string[]
 }
+import imgAtendimento from "../assets/atendimentoInf.jpg"
 
 export const especialidades: Record<string, Especialidade> = {
   psicologia: {
@@ -20,9 +21,9 @@ que visam fortalecer autonomia, autoestima, regulação emocional e qualidade de
 sempre em parceria com a família.
 `,
     imagens: [
-      "/assets/psicologia1.jpg",
-      "/assets/psicologia2.jpg",
-      "/assets/psicologia3.jpg"
+      imgAtendimento,
+      imgAtendimento,
+      imgAtendimento
     ]
   },
 
@@ -40,9 +41,9 @@ As intervenções são planejadas a partir de avaliação funcional criteriosa,
 com metas individualizadas e monitoramento contínuo de resultados.
 `,
     imagens: [
-      "/assets/aba1.jpg",
-      "/assets/aba2.jpg",
-      "/assets/aba3.jpg"
+      imgAtendimento,
+      imgAtendimento,
+      imgAtendimento
     ]
   },
 
@@ -59,9 +60,9 @@ O AT atua como mediador entre o paciente e o ambiente, promovendo participação
 adaptação às demandas sociais e fortalecimento da independência funcional.
 `,
     imagens: [
-      "/assets/at1.jpg",
-      "/assets/at2.jpg",
-      "/assets/at3.jpg"
+      imgAtendimento,
+      imgAtendimento,
+      imgAtendimento
     ]
   },
 
@@ -79,9 +80,9 @@ comunicativa, ampliando as possibilidades de expressão, interação social e
 desempenho acadêmico e profissional.
 `,
     imagens: [
-      "/assets/fono1.jpg",
-      "/assets/fono2.jpg",
-      "/assets/fono3.jpg"
+      imgAtendimento,
+      imgAtendimento,
+      imgAtendimento
     ]
   },
 
@@ -96,8 +97,8 @@ contribuindo para cicatrização tecidual, modulação da dor e melhora funciona
 sempre com aplicação segura e respaldada por critérios técnicos.
 `,
     imagens: [
-      "/assets/laser1.jpg",
-      "/assets/laser2.jpg"
+      imgAtendimento,
+      imgAtendimento
     ]
   },
 
@@ -114,8 +115,8 @@ Na Clínica Meus Sentidos, é aplicada mediante avaliação criteriosa, como
 recurso complementar ao plano terapêutico individualizado.
 `,
     imagens: [
-      "/assets/neuro1.jpg",
-      "/assets/neuro2.jpg"
+      imgAtendimento,
+      imgAtendimento
     ]
   },
 
@@ -132,8 +133,8 @@ O trabalho é direcionado ao desenvolvimento de estratégias que potencializem
 habilidades, respeitando o perfil neurocognitivo de cada paciente.
 `,
     imagens: [
-      "/assets/neuropsico1.jpg",
-      "/assets/neuropsico2.jpg"
+      imgAtendimento,
+      imgAtendimento
     ]
   },
 
@@ -148,8 +149,8 @@ e autonomia frente ao processo de aprendizagem.
 O objetivo é fortalecer o desempenho escolar e a autoconfiança.
 `,
     imagens: [
-      "/assets/reforco1.jpg",
-      "/assets/reforco2.jpg"
+      imgAtendimento,
+      imgAtendimento
     ]
   },
 
@@ -167,9 +168,9 @@ O plano terapêutico é construído de forma individualizada, considerando as
 demandas e objetivos de cada paciente.
 `,
     imagens: [
-      "/assets/to1.jpg",
-      "/assets/to2.jpg",
-      "/assets/to3.jpg"
+      imgAtendimento,
+      imgAtendimento,
+      imgAtendimento
     ]
   },
 
@@ -185,8 +186,8 @@ autorregulação, planejamento motor, atenção e desempenho funcional
 nas atividades do dia a dia.
 `,
     imagens: [
-      "/assets/sensorial1.jpg",
-      "/assets/sensorial2.jpg"
+      imgAtendimento,
+      imgAtendimento
     ]
   },
 
@@ -203,8 +204,8 @@ Os atendimentos são pautados em avaliação individualizada e metas
 terapêuticas claras.
 `,
     imagens: [
-      "/assets/fisio1.jpg",
-      "/assets/fisio2.jpg"
+      imgAtendimento,
+      imgAtendimento
     ]
   },
 
@@ -219,8 +220,8 @@ Adaptado às necessidades clínicas, contribui para melhora da postura,
 estabilidade, coordenação e funcionalidade global.
 `,
     imagens: [
-      "/assets/pilates1.jpg",
-      "/assets/pilates2.jpg"
+      imgAtendimento,
+      imgAtendimento
     ]
   },
 
@@ -236,8 +237,8 @@ promovendo relaxamento, fortalecimento muscular e ampliação das
 habilidades funcionais.
 `,
     imagens: [
-      "/assets/aquatica1.jpg",
-      "/assets/aquatica2.jpg"
+      imgAtendimento,
+      imgAtendimento
     ]
   },
 
@@ -252,8 +253,8 @@ as condições clínicas e objetivos de cada paciente, com foco em
 qualidade de vida e autonomia.
 `,
     imagens: [
-      "/assets/edfisica1.jpg",
-      "/assets/edfisica2.jpg"
+      imgAtendimento,
+      imgAtendimento
     ]
   },
 
@@ -267,8 +268,8 @@ A prescrição é personalizada e supervisionada, garantindo
 segurança e eficácia no processo de treinamento.
 `,
     imagens: [
-      "/assets/musculacao1.jpg",
-      "/assets/musculacao2.jpg"
+      imgAtendimento,
+      imgAtendimento
     ]
   },
 
@@ -287,8 +288,8 @@ individualizados, promovendo desenvolvimento e fortalecimento
 de vínculos por meio da experiência musical.
 `,
     imagens: [
-      "/assets/musicoterapia1.jpg",
-      "/assets/musicoterapia2.jpg"
+      imgAtendimento,
+      imgAtendimento
     ]
   }
 }

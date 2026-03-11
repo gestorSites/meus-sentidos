@@ -2,7 +2,7 @@ import clinicImg from "../../assets/clinic.jpg"
 import Reveal from "../Reveal"
 
 
-import banner1 from "../../assets/banner1.png"
+import banner1 from "../../assets/banner.png"
 import HeroCarousel from "./HeroCarousel"
 
 const banners = [

@@ -5,13 +5,15 @@ export type Profissional = {
   area: string
   curriculo: string[]
 }
+import person from "../assets/profissionais/person.jpg"
+
 
 export const profissionais: Record<string, Profissional> = {
 
   francielly_caroline: {
     nome: "Francielly Caroline",
     cargo: "Terapeuta Ocupacional e Diretora Clínica",
-    foto: "/assets/profissionais/francielly_caroline.jpg",
+    foto: person,
     area: "Terapia Ocupacional",
     curriculo: [
       "Terapeuta Ocupacional graduada pela Universidade de São Paulo (USP)",
@@ -27,7 +29,7 @@ export const profissionais: Record<string, Profissional> = {
   natalia_silva_garcia: {
     nome: "Natália Silva Garcia",
     cargo: "Terapeuta Ocupacional",
-    foto: "/assets/profissionais/natalia_silva_garcia.jpg",
+    foto: person,
     area: "Terapia Ocupacional",
     curriculo: [
       "Terapeuta Ocupacional formada pela Universidade Federal do Triângulo Mineiro (UFTM)",
@@ -42,7 +44,7 @@ export const profissionais: Record<string, Profissional> = {
   maria_eduarda_freire: {
     nome: "Maria Eduarda Freire",
     cargo: "Terapeuta Ocupacional",
-    foto: "/assets/profissionais/maria_eduarda_freire.jpg",
+    foto: person,
     area: "Terapia Ocupacional",
     curriculo: [
       "Terapeuta Ocupacional pelo Centro Universitário Claretiano",
@@ -56,7 +58,7 @@ export const profissionais: Record<string, Profissional> = {
   ruth_oliveira_roque: {
     nome: "Ruth Oliveira Roque",
     cargo: "Terapeuta Ocupacional",
-    foto: "/assets/profissionais/ruth_oliveira_roque.jpg",
+    foto: person,
     area: "Terapia Ocupacional",
     curriculo: [
       "Graduação em Terapia Ocupacional",
@@ -71,8 +73,8 @@ export const profissionais: Record<string, Profissional> = {
   darliani_guimaraes: {
     nome: "Darliani Guimarães",
     cargo: "Psicopedagoga e Terapeuta Ocupacional",
-    foto: "/assets/profissionais/darliani_guimaraes.jpg",
-    area: "Psicopedagogia",
+    foto: person,
+    area: "Terapia Ocupacional",
     curriculo: [
       "Graduada em Letras",
       "Graduada em Pedagogia",
@@ -87,7 +89,7 @@ export const profissionais: Record<string, Profissional> = {
   leticia_brito_mota: {
     nome: "Leticia Brito Mota",
     cargo: "Neuropsicopedagoga e Aplicadora ABA",
-    foto: "/assets/profissionais/leticia_brito_mota.jpg",
+    foto: person,
     area: "Neuropsicopedagogia",
     curriculo: []
   },
@@ -95,7 +97,7 @@ export const profissionais: Record<string, Profissional> = {
   camilla_da_silva_polo: {
     nome: "Camilla da Silva Polo",
     cargo: "Neuropsicopedagoga",
-    foto: "/assets/profissionais/camilla_da_silva_polo.jpg",
+    foto: person,
     area: "Neuropsicopedagogia",
     curriculo: [
       "Licenciatura em Pedagogia",
@@ -110,7 +112,7 @@ export const profissionais: Record<string, Profissional> = {
   eduardo_henrique_hernandes: {
     nome: "Eduardo Henrique Hernandes",
     cargo: "Educador Físico",
-    foto: "/assets/profissionais/eduardo_henrique_hernandes.jpg",
+    foto: person,
     area: "Educação Física",
     curriculo: [
       "Graduado em Educação Física pela Universidade de Franca",
@@ -122,7 +124,7 @@ export const profissionais: Record<string, Profissional> = {
   maria_flavia_cazon: {
     nome: "Maria Flávia Cazon",
     cargo: "Fisioterapeuta",
-    foto: "/assets/profissionais/maria_flavia_cazon.jpg",
+    foto: person,
     area: "Fisioterapia",
     curriculo: [
       "Fisioterapeuta pelo Centro Universitário Claretiano",
@@ -138,7 +140,7 @@ export const profissionais: Record<string, Profissional> = {
   mariano_cintra_de_castro: {
     nome: "Mariano Cintra de Castro",
     cargo: "Fonoaudiólogo e Neuromodulador",
-    foto: "/assets/profissionais/mariano_cintra_de_castro.jpg",
+    foto: person,
     area: "Fonoaudiologia",
     curriculo: [
       "Graduado em Fonoaudiologia",
@@ -152,7 +154,7 @@ export const profissionais: Record<string, Profissional> = {
   josiane_teixeira: {
     nome: "Josiane Teixeira",
     cargo: "Fonoaudióloga",
-    foto: "/assets/profissionais/josiane_teixeira.jpg",
+    foto: person,
     area: "Fonoaudiologia",
     curriculo: [
       "Fonoaudióloga pela Universidade de Franca",
@@ -165,7 +167,7 @@ export const profissionais: Record<string, Profissional> = {
   leonara_martins: {
     nome: "Leonara Martins",
     cargo: "Fonoaudióloga, Psicóloga e Coordenadora Clínica",
-    foto: "/assets/profissionais/leonara_martins.jpg",
+    foto: person,
     area: "Fonoaudiologia",
     curriculo: [
       "Mestra em Promoção da Saúde pela Universidade de Franca",
@@ -182,7 +184,7 @@ export const profissionais: Record<string, Profissional> = {
   rafaella_orlando: {
     nome: "Rafaella Orlando",
     cargo: "Psicóloga e Coordenadora Clínica",
-    foto: "/assets/profissionais/rafaella_orlando.jpg",
+    foto: person,
     area: "Psicologia",
     curriculo: [
       "Psicóloga pelo Uni-FACEF",
@@ -198,7 +200,7 @@ export const profissionais: Record<string, Profissional> = {
   tiffany_oliveira: {
     nome: "Tiffany Oliveira",
     cargo: "Psicóloga",
-    foto: "/assets/profissionais/tiffany_oliveira.jpg",
+    foto: person,
     area: "Psicologia",
     curriculo: [
       "Psicóloga pelo Uni-FACEF",
@@ -213,7 +215,7 @@ export const profissionais: Record<string, Profissional> = {
   camila_fernandes: {
     nome: "Camila Fernandes",
     cargo: "Psicóloga",
-    foto: "/assets/profissionais/camila_fernandes.jpg",
+    foto: person,
     area: "Psicologia",
     curriculo: [
       "Psicóloga pelo Uni-FACEF",
@@ -226,7 +228,7 @@ export const profissionais: Record<string, Profissional> = {
   leticia_lirian_batista: {
     nome: "Leticia Lirian Batista",
     cargo: "Psicóloga",
-    foto: "/assets/profissionais/leticia_lirian_batista.jpg",
+    foto: person,
     area: "Psicologia",
     curriculo: [
       "Psicóloga pela Universidade de Franca",
@@ -237,7 +239,7 @@ export const profissionais: Record<string, Profissional> = {
   camila_busqueiro: {
     nome: "Camila Busqueiro",
     cargo: "Psicóloga",
-    foto: "/assets/profissionais/camila_busqueiro.jpg",
+    foto: person,
     area: "Psicologia",
     curriculo: [
       "Psicóloga pelo Uni-FACEF",
@@ -249,7 +251,7 @@ export const profissionais: Record<string, Profissional> = {
   gabriella_karla_de_souza: {
     nome: "Gabriella Karla de Souza",
     cargo: "Psicóloga",
-    foto: "/assets/profissionais/gabriella_karla_de_souza.jpg",
+    foto: person,
     area: "Psicologia",
     curriculo: [
       "Graduada em Psicologia pelo Uni-FACEF",

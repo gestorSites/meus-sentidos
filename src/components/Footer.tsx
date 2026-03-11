@@ -3,9 +3,9 @@ import {
   Clock,
   MapPin,
   Instagram,
-  Facebook,
 } from "lucide-react"
 import logoMeusSentidos2 from "../assets/logoMSM.png"
+import Reveal from "./Reveal"
 
 export default function Footer() {
   return (
@@ -16,58 +16,62 @@ export default function Footer() {
 
         {/* COLUNA 1 - SOBRE */}
         <div>
-          <img
-            src={logoMeusSentidos2}
-            alt="Logo Meus Sentidos"
-            loading="lazy"
-            className="h-10 object-cover"
-          />
-          <p className="text-sm leading-relaxed mt-6">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum a, nam officiis molestias esse et, earum ipsam error, ipsa quam nihil laboriosam perspiciatis fuga veritatis quas voluptatem totam magni libero?
-          </p>
+          <Reveal delay={0.3}>
+            <img
+              src={logoMeusSentidos2}
+              alt="Clínica Meus Sentidos"
+              className="w-32"
+            />
+          </Reveal>
+          <Reveal delay={0.4}>
+            <p className="mt-4 text-sm">
+              Cuidado especializado para crianças e adolescentes com TEA. Atendimento humanizado, individualizado e baseado em evidências.
+            </p>
 
-          <div className="flex gap-4 mt-6">
-            <a target="_blank" href="https://instagram.com/meus_sentidoss" className="hover:text-[#1177E3] transition">
-              <Instagram size={18} />
-            </a>
-            <a target="_blank" href="#" className="hover:text-[#1177E3] transition">
-              <Facebook size={18} />
-            </a>
-          </div>
+            <div className="flex gap-4 mt-6">
+              <a target="_blank" href="https://instagram.com/meus_sentidoss" className="hover:text-[#1177E3] transition">
+                <Instagram size={18} />
+              </a>
+            </div>
+          </Reveal>
         </div>
 
         {/* COLUNA 2 - CONTATO */}
         <div>
-          <h3 className="text-xl font-semibold mb-4">Contato</h3>
-
+          <Reveal delay={0.3}>
+            <h3 className="text-xl font-semibold mb-4">Contato</h3>
+          </Reveal>
           <div className="space-y-4 text-sm">
-            <div className="flex items-center gap-2">
-              <Phone size={16} />
-              <span>(16) 99283-2613</span>
-            </div>
+            <Reveal delay={0.4}>
+              <div className="flex items-center gap-2">
+                <Phone size={16} />
+                <span>(16) 99283-2613</span>
+              </div>
+            </Reveal>
 
 
-            <div className="flex items-center gap-2">
-              <Clock size={16} />
-              <span>Segunda a Sexta – 07:00 às 18:30</span>
-            </div>
+            <Reveal delay={0.5}>
+              <div className="flex items-center gap-2">
+                <Clock size={16} />
+                <span>Segunda a Sexta – 07:00 às 18:30</span>
+              </div>
+            </Reveal>
 
-            {/* LINK GOOGLE MAPS */}
-            <a
-              href="https://maps.app.goo.gl/tG8bjgMgc58p23J47"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 hover:text-[#1177E3] transition"
-            >
-              <MapPin size={16} />
-              <span>
-                Rua dos Arvoredos, 830, Residencial Paraíso I, França SP, 14403-149
-              </span>
-            </a>
+            <Reveal delay={0.6}>
+              <a
+                href="https://maps.app.goo.gl/tG8bjgMgc58p23J47"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:text-[#1177E3] transition"
+              >
+                <MapPin size={16} />
+                <span>
+                  Rua dos Arvoredos, 830, Residencial Paraíso I, França SP, 14403-149
+                </span>
+              </a>
+            </Reveal>
           </div>
         </div>
-
-        {/* COLUNA 3 - MAPA EMBUTIDO */}
         <div>
           <h3 className="text-xl font-semibold mb-4">Localização</h3>
 

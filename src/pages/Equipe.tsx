@@ -26,9 +26,9 @@ export default function EquipePage() {
 
       {Object.entries(profissionaisPorArea).map(([area, lista]) => (
 
-        <section key={area} className="space-y-8">
+        <section key={area} className="space-y-4">
 
-          <h2 className="text-2xl font-semibold">
+          <h2 className="text-2xl font-semibold text-[#1177E3]">
             {area}
           </h2>
 
