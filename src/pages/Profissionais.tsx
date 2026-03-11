@@ -1,67 +1,62 @@
 import { useParams } from "react-router-dom"
-import { especialidades } from "../data/especialidades"
+import { profissionais } from "../data/profissionais"
+import Reveal from "../components/Reveal"
 
-
-export default function ProfissionaisPage() {
+export default function ProfissionalPage() {
 
   const { slug } = useParams()
 
-  const especialidade =
-    slug ? especialidades[slug as keyof typeof especialidades] : null
+  const profissional =
+    slug ? profissionais[slug as keyof typeof profissionais] : undefined
 
-  if (!especialidade) {
-    return <div className="p-10 text-center">Especialidade não encontrada</div>
+  if (!profissional) {
+    return <div className="p-10 text-center">Profissional não encontrado</div>
   }
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-16 space-y-20">
+    <div className="max-w-5xl mx-auto px-6 py-20">
 
-      {/* SEÇÃO 1 */}
+      <div className="grid md:grid-cols-2 gap-12 items-start">
 
-      <section className="grid md:grid-cols-2 gap-12 items-center">
+        {/* FOTO */}
+
+        <Reveal>
+          <img
+            src={profissional.foto}
+            alt={profissional.nome}
+            className="rounded-2xl shadow-lg w-full object-cover"
+          />
+        </Reveal>
+
+        {/* TEXTO */}
 
         <div>
-          <h1 className="text-4xl font-bold mb-4">
-            {especialidade.titulo}
-          </h1>
 
-          <h2 className="text-xl text-gray-600 mb-6">
-            {especialidade.subtitulo}
-          </h2>
+          <Reveal delay={0.1}>
+            <h1 className="text-4xl font-bold mb-2">
+              {profissional.nome}
+            </h1>
+          </Reveal>
 
-          <p className="text-gray-700 leading-relaxed">
-            {especialidade.descricao}
-          </p>
+          <Reveal delay={0.2}>
+            <h2 className="text-xl text-gray-600 mb-6">
+              {profissional.cargo}
+            </h2>
+          </Reveal>
+
+          <ul className="space-y-3 text-gray-700 leading-relaxed">
+            {profissional.curriculo.map((item, i) => (
+              <Reveal key={i} delay={0.3 + i * 0.05}>
+                <li className="list-disc list-inside">
+                  {item}
+                </li>
+              </Reveal>
+            ))}
+          </ul>
+
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
-          {especialidade.imagens.map((img, i) => (
-            <img
-              key={i}
-              src={img}
-              loading="lazy"
-              className="rounded-xl object-cover h-40 w-full"
-            />
-          ))}
-        </div>
-
-      </section>
-
-      {/* SEÇÃO 2 */}
-
-      <section>
-
-        <h3 className="text-3xl font-semibold mb-6">
-          {especialidade.beneficiosTitulo}
-        </h3>
-
-        <ul className="space-y-3 list-disc list-inside text-gray-700">
-          {especialidade.beneficios.map((item, i) => (
-            <li key={i}>{item}</li>
-          ))}
-        </ul>
-
-      </section>
+      </div>
 
     </div>
   )

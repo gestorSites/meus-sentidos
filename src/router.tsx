@@ -5,6 +5,7 @@ import MainLayout from "./layouts/MainLayout";
 import NotFound from "./pages/NotFound";
 import Especialidade from "./pages/Especialidade";
 import Profissionais from "./pages/Profissionais";
+import EquipePage from "./pages/Equipe";
 
 export const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ export const router = createBrowserRouter([
         path: "profissionais/:slug",
         element: <Profissionais />,
       },
+      {
+        path: "profissionais",
+        element: <EquipePage />,
+      }
     ],
   },
   {
