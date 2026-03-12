@@ -91,7 +91,14 @@ export const profissionais: Record<string, Profissional> = {
     cargo: "Neuropsicopedagoga e Aplicadora ABA",
     foto: person,
     area: "Neuropsicopedagogia",
-    curriculo: []
+    curriculo: [
+      "Pós-graduada em Neuropsicopedagogia pela FAMEESP – Faculdade Metropolitana do Estado de São Paulo",
+      "Licenciada em Pedagogia pela FAPESF – Faculdade Pestalozzi de Franca",
+      "Aperfeiçoamento em Desenvolvimento Cognitivo e Psicomotor na Infância pela FAMEESP – Faculdade Metropolitana do Estado de São Paulo",
+      "Formação em Psicomotricidade como Ferramenta para a Aprendizagem pela FAPESF – Faculdade Pestalozzi de Franca",
+      "Aperfeiçoamento em Metodologia Reggio Emilia pela Aprimore",
+      "Experiência da Educação Infantil (Berçário) ao Ensino Fundamental II"
+    ]
   },
 
   camilla_da_silva_polo: {

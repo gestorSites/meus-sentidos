@@ -7,6 +7,7 @@ import {
   Dumbbell,
   Waves,
   Music,
+  Book,
   Zap,
 } from "lucide-react"
 import Reveal from "../Reveal"
@@ -14,12 +15,12 @@ import Reveal from "../Reveal"
 const specialties = [
   { title: "Psicologia", slug: "psicologia", icon: Brain },
   { title: "ABA – Análise do Comportamento Aplicada", slug: "aba", icon: Activity },
-  { title: "Acompanhamento Terapêutico (AT)", slug: "acompanhamento-terapeutico", icon: Zap },
+  { title: "Acompanhamento Terapêutico (AT)", slug: "acompanhamento-terapeutico", icon: Book },
   { title: "Fonoaudiologia", slug: "fonoaudiologia", icon: MessageCircle },
   { title: "Laserterapia", slug: "laserterapia", icon: Sparkles },
   { title: "Neuromodulação", slug: "neuromodulacao", icon: Zap },
   { title: "Neuropsicopedagogia", slug: "neuropsicopedagogia", icon: Brain },
-  { title: "Reforço Escolar", slug: "reforco-escolar", icon: Brain },
+  { title: "Reforço Escolar", slug: "reforco-escolar", icon: Book },
   { title: "Terapia Ocupacional", slug: "terapia-ocupacional", icon: Activity },
   { title: "Integração Sensorial de Ayres", slug: "integracao-sensorial", icon: Activity },
   { title: "Fisioterapia", slug: "fisioterapia", icon: Activity },
@@ -44,7 +45,7 @@ export default function Services() {
             <Reveal key={slug} delay={index * 0.03}>
               <Link
                 key={slug}
-                to={`/especialidades/${slug}`}
+                to={`/especialidades#${slug}`}
                 className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col items-center text-center"
               >
                 <div className="w-14 h-14 rounded-full bg-blue-100 text-[#1177E3] flex items-center justify-center mb-4">

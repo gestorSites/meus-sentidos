@@ -1,4 +1,5 @@
 import clinicImg from "../../assets/clinic.jpg"
+import ImageCarousel from "../ImageCarousel"
 export default function About() {
   return (
     <section id="sobre" className="py-24 bg-white scroll-mt-24">
@@ -20,11 +21,7 @@ export default function About() {
 
           {/* IMAGEM */}
           <div>
-            <img
-              src={clinicImg}
-              alt="Clínica Meus Sentidos"
-              className="rounded-3xl shadow-xl w-full object-cover"
-            />
+            <ImageCarousel images={[clinicImg, clinicImg, clinicImg]} height="300px" />
           </div>
 
           {/* TEXTO ESTRUTURADO */}

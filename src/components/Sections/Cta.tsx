@@ -6,7 +6,7 @@ export default function CTA() {
       </h2>
 
       <a
-        href="https://wa.me/55XXXXXXXXX"
+        href="https://wa.me/5516992832613"
         target="_blank"
         className="inline-block mt-8 px-8 py-4 bg-white text-blue-700 rounded-full font-medium hover:bg-gray-100"
       >

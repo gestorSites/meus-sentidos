@@ -5,33 +5,33 @@ import { useActiveSection } from "../hooks/useActiveSection"
 import { ChevronDown } from "lucide-react"
 import { useLocation } from "react-router-dom"
 
-const sections = ["home", "sobre", "especialidades", "profissionais", "faq", "contato"]
+const sections = ["home", "sobre", "especialidades", "faq", "contato"]
 
 const menu = [
     { label: "Início", id: "home" },
     { label: "Historia", id: "sobre" },
-    { label: "Profissionais", id: "profissionais" },
+    { label: "Profissionais", href: "/profissionais" },
     { label: "FAQ", id: "faq" },
     { label: "Contato", id: "contato" },
     { label: "Avaliações", href: "/avaliacoes" }
 ]
 const specialties = [
-    { label: "Psicologia", href: "/especialidades/psicologia" },
-    { label: "ABA", href: "/especialidades/aba" },
-    { label: "Acompanhamento Terapêutico", href: "/especialidades/acompanhamento-terapeutico" },
-    { label: "Fonoaudiologia", href: "/especialidades/fonoaudiologia" },
-    { label: "Laserterapia", href: "/especialidades/laserterapia" },
-    { label: "Neuromodulação", href: "/especialidades/neuromodulacao" },
-    { label: "Neuropsicopedagogia", href: "/especialidades/neuropsicopedagogia" },
-    { label: "Reforço Escolar", href: "/especialidades/reforco-escolar" },
-    { label: "Terapia Ocupacional", href: "/especialidades/terapia-ocupacional" },
-    { label: "Integração Sensorial de Ayres", href: "/especialidades/integracao-sensorial" },
-    { label: "Fisioterapia", href: "/especialidades/fisioterapia" },
-    { label: "Pilates", href: "/especialidades/pilates" },
-    { label: "Terapia Aquática", href: "/especialidades/terapia-aquatica" },
-    { label: "Educação Física", href: "/especialidades/educacao-fisica" },
-    { label: "Musculação", href: "/especialidades/musculacao" },
-    { label: "Musicoterapia", href: "/especialidades/musicoterapia" },
+    { label: "Psicologia", href: "/especialidades#psicologia" },
+    { label: "ABA", href: "/especialidades#aba" },
+    { label: "Acompanhamento Terapêutico", href: "/especialidades#acompanhamento-terapeutico" },
+    { label: "Fonoaudiologia", href: "/especialidades#fonoaudiologia" },
+    { label: "Laserterapia", href: "/especialidades#laserterapia" },
+    { label: "Neuromodulação", href: "/especialidades#neuromodulacao" },
+    { label: "Neuropsicopedagogia", href: "/especialidades#neuropsicopedagogia" },
+    { label: "Reforço Escolar", href: "/especialidades#reforco-escolar" },
+    { label: "Terapia Ocupacional", href: "/especialidades#terapia-ocupacional" },
+    { label: "Integração Sensorial de Ayres", href: "/especialidades#integracao-sensorial" },
+    { label: "Fisioterapia", href: "/especialidades#fisioterapia" },
+    { label: "Pilates", href: "/especialidades#pilates" },
+    { label: "Terapia Aquática", href: "/especialidades#terapia-aquatica" },
+    { label: "Musicoterapia", href: "/especialidades#musicoterapia" },
+    { label: "Educação Física", href: "/especialidades#educacao-fisica" },
+    { label: "Musculação", href: "/especialidades#musculacao" },
 ]
 
 
@@ -61,7 +61,7 @@ export default function Header() {
             <div className="h-[6px] w-full bg-gradient-to-r from-[#F2D13D] via-[#5BC0EB] to-[#0B3C49]" />
             <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
                 <a
-                    href="#home"
+                    href="/"
                     className="flex items-center gap-3 font-semibold text-[#1177E3]"
                 >
                     <img

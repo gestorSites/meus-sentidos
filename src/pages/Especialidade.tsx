@@ -1,78 +1,89 @@
-import { useParams } from "react-router-dom"
-import { especialidades, type EspecialidadeSlug } from "../data/especialidades"
-import Reveal from "../components/Reveal"
 import { useEffect } from "react"
+import { especialidades } from "../data/especialidades"
+import Reveal from "../components/Reveal"
 
+export default function EspecialidadesPage() {
 
-export default function EspecialidadePage() {
-
-  const { slug } = useParams<{ slug: EspecialidadeSlug }>()
-
-  const especialidade = slug ? especialidades[slug] : undefined
-
-  if (!especialidade) {
-    return <div className="p-10 text-center">Especialidade não encontrada</div>
-  }
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [slug])
+    const hash = window.location.hash.replace("#", "")
+
+    if (hash) {
+      const el = document.getElementById(hash)
+
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth" })
+        }, 100)
+      }
+    } else {
+      window.scrollTo(0, 0)
+    }
+  }, [])
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-24 space-y-20">
+    <div className="max-w-6xl mx-auto px-6 py-24 space-y-32">
+      <h1 className="text-4xl font-bold text-center text-[#1177E3]">
+        Especialidades
+      </h1>
+      {Object.entries(especialidades).map(([slug, especialidade], index) => {
 
-      <section className="grid md:grid-cols-2 gap-12 items-center">
+        const imagemDireita = index % 2 === 0
 
-        <div>
-          <Reveal delay={0.3}>
-            <h1 className="text-4xl font-bold mb-4">
-              {especialidade.titulo}
-            </h1>
-          </Reveal>
+        return (
 
-          {especialidade.subtitulo && (
-            <Reveal delay={0.6}>
-              <h2 className="text-2xl font-semibold mb-6 text-gray-700">
-                {especialidade.subtitulo}
-              </h2>
-            </Reveal>
-          )}
+          <section
+            key={slug}
+            id={slug}
+            className="scroll-mt-32 grid md:grid-cols-2 gap-12 items-center"
+          >
 
-          <p className="text-gray-700 leading-relaxed">
-            {especialidade.descricao}
-          </p>
-        </div>
+            {/* TEXTO */}
+            <div className={imagemDireita ? "" : "md:order-2"}>
 
-        <div className="grid grid-cols-2 gap-4">
-          {especialidade.imagens.map((img, i) => (
-            <Reveal key={slug} delay={i * 0.08}>
-              <img
-                key={i}
-                src={img}
-                loading="lazy"
-                className="rounded-xl object-cover h-40 w-full transition-all duration-300 hover:scale-105"
-              />
-            </Reveal>
-          ))}
-        </div>
+              <Reveal>
+                <h2 className="text-4xl font-bold mb-4">
+                  {especialidade.titulo}
+                </h2>
+              </Reveal>
 
-      </section>
+              {especialidade.subtitulo && (
+                <Reveal delay={0.2}>
+                  <h3 className="text-2xl font-semibold mb-6 text-gray-700">
+                    {especialidade.subtitulo}
+                  </h3>
+                </Reveal>
+              )}
 
-      {/* SEÇÃO 2 */}
+              <p className="text-gray-700 leading-relaxed mb-6">
+                {especialidade.descricao}
+              </p>
 
-      {especialidade.beneficios && (
-        <section>
-          <h2 className="text-3xl font-bold mb-6">
-            {especialidade.beneficiosTitulo || "Benefícios"}
-          </h2>
+              {especialidade.beneficios && (
+                <ul className="list-disc list-inside space-y-2 text-gray-700">
+                  {especialidade.beneficios.map((beneficio, i) => (
+                    <li key={i}>{beneficio}</li>
+                  ))}
+                </ul>
+              )}
 
-          <ul className="list-disc list-inside space-y-2 text-gray-700">
-            {especialidade.beneficios.map((beneficio, i) => (
-              <li key={i}>{beneficio}</li>
-            ))}
-          </ul>
-        </section>
-      )}
+            </div>
+
+            {/* IMAGENS */}
+            <div className={`grid grid-cols-2 gap-4 ${imagemDireita ? "" : "md:order-1"}`}>
+              {especialidade.imagens.map((img, i) => (
+                <Reveal key={i} delay={i * 0.08}>
+                  <img
+                    src={img}
+                    loading="lazy"
+                    className="rounded-xl object-cover h-44 w-full transition-all duration-300 hover:scale-105"
+                  />
+                </Reveal>
+              ))}
+            </div>
+
+          </section>
+        )
+      })}
 
     </div>
   )

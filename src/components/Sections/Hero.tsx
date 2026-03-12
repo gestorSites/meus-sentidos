@@ -38,7 +38,7 @@ export default function Hero() {
                 target="_blank"
                 className="inline-flex uppercase items-center gap-3 mt-8 px-8 py-3 rounded-full bg-blue-600 text-white font-medium hover:bg-blue-700 transition"
               >
-                Falar com nossa equipe agora
+                Fale com nossa equipe
               </a>
             </Reveal>
           </div>

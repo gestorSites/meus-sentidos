@@ -13,8 +13,8 @@ export default function Home() {
             <main className="pt-16">
                 <Hero />
                 <About />
-                <Services />
                 <TeamCarousel />
+                <Services />
                 <FAQ />
                 <ContactSection />
             </main>

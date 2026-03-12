@@ -53,7 +53,7 @@ export default function Footer() {
             <Reveal delay={0.5}>
               <div className="flex items-center gap-2">
                 <Clock size={16} />
-                <span>Segunda a Sexta – 07:00 às 18:30</span>
+                <span>Segunda a Sexta – 07:30 às 17:45</span>
               </div>
             </Reveal>
 
