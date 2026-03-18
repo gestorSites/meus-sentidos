@@ -1,8 +1,8 @@
-import clinicImg from "../../assets/clinic.jpg"
+import clinicImg from "../../assets/FAIXADA-CLINICA.jpeg"
 import Reveal from "../Reveal"
 
 
-import banner1 from "../../assets/banner.png"
+import banner1 from "../../assets/banner.webp"
 import HeroCarousel from "./HeroCarousel"
 
 const banners = [

@@ -6,7 +6,17 @@ export type Especialidade = {
   beneficiosTitulo?: string
   beneficios?: string[]
 }
-import imgAtendimento from "../assets/atendimentoInf.jpg"
+import edfisica from "../assets/locais/ED_FISICA.webp"
+import fisio from "../assets/locais/FISIOTERAPIA.webp"
+import fono from "../assets/locais/FONOAUDIOLOGIA.webp"
+import music from "../assets/locais/MUSICOTERAPIA.webp"
+import neuroMus from "../assets/locais/NEUROMODULACAO.webp"
+import neuroPs from "../assets/locais/NEUROPSICOPEDAGOGIA.webp"
+import pilates from "../assets/locais/PILATES.webp"
+import psico from "../assets/locais/PSICOLOGIA.webp"
+import terapAq from "../assets/locais/TERAPIA_AQUATICA.webp"
+import terapOq from "../assets/locais/TERAPIA_OCUPACIONAL .webp"
+import teraS from "../assets/locais/THERASUIT.webp"
 
 export const especialidades: Record<string, Especialidade> = {
   psicologia: {
@@ -21,9 +31,7 @@ que visam fortalecer autonomia, autoestima, regulação emocional e qualidade de
 sempre em parceria com a família.
 `,
     imagens: [
-      imgAtendimento,
-      imgAtendimento,
-      imgAtendimento
+      psico
     ]
   },
 
@@ -41,9 +49,7 @@ As intervenções são planejadas a partir de avaliação funcional criteriosa,
 com metas individualizadas e monitoramento contínuo de resultados.
 `,
     imagens: [
-      imgAtendimento,
-      imgAtendimento,
-      imgAtendimento
+      edfisica
     ]
   },
 
@@ -60,9 +66,7 @@ O AT atua como mediador entre o paciente e o ambiente, promovendo participação
 adaptação às demandas sociais e fortalecimento da independência funcional.
 `,
     imagens: [
-      imgAtendimento,
-      imgAtendimento,
-      imgAtendimento
+      'NAO TEM FOTO'
     ]
   },
 
@@ -80,9 +84,7 @@ comunicativa, ampliando as possibilidades de expressão, interação social e
 desempenho acadêmico e profissional.
 `,
     imagens: [
-      imgAtendimento,
-      imgAtendimento,
-      imgAtendimento
+      fono
     ]
   },
 
@@ -97,8 +99,7 @@ contribuindo para cicatrização tecidual, modulação da dor e melhora funciona
 sempre com aplicação segura e respaldada por critérios técnicos.
 `,
     imagens: [
-      imgAtendimento,
-      imgAtendimento
+      'NAO TEM FOTO'
     ]
   },
 
@@ -115,8 +116,7 @@ Na Clínica Meus Sentidos, é aplicada mediante avaliação criteriosa, como
 recurso complementar ao plano terapêutico individualizado.
 `,
     imagens: [
-      imgAtendimento,
-      imgAtendimento
+      neuroMus
     ]
   },
 
@@ -133,8 +133,7 @@ O trabalho é direcionado ao desenvolvimento de estratégias que potencializem
 habilidades, respeitando o perfil neurocognitivo de cada paciente.
 `,
     imagens: [
-      imgAtendimento,
-      imgAtendimento
+      neuroPs
     ]
   },
 
@@ -149,8 +148,7 @@ e autonomia frente ao processo de aprendizagem.
 O objetivo é fortalecer o desempenho escolar e a autoconfiança.
 `,
     imagens: [
-      imgAtendimento,
-      imgAtendimento
+      'NAO TEM FOTO'
     ]
   },
 
@@ -168,9 +166,7 @@ O plano terapêutico é construído de forma individualizada, considerando as
 demandas e objetivos de cada paciente.
 `,
     imagens: [
-      imgAtendimento,
-      imgAtendimento,
-      imgAtendimento
+      terapOq,
     ]
   },
 
@@ -186,8 +182,7 @@ autorregulação, planejamento motor, atenção e desempenho funcional
 nas atividades do dia a dia.
 `,
     imagens: [
-      imgAtendimento,
-      imgAtendimento
+      'NAO TEM FOTO'
     ]
   },
 
@@ -204,8 +199,21 @@ Os atendimentos são pautados em avaliação individualizada e metas
 terapêuticas claras.
 `,
     imagens: [
-      imgAtendimento,
-      imgAtendimento
+      fisio
+    ]
+  },
+
+  therasuit: {
+    titulo: "Therasuit",
+    descricao: `
+O Método TheraSuit é uma abordagem de fisioterapia intensiva voltada para o desenvolvimento e aprimoramento das habilidades motoras. Utiliza uma roupa terapêutica com elásticos, que auxilia no alinhamento do corpo, na estabilização das articulações e na melhora da percepção corporal.
+
+Durante as sessões, são realizados exercícios funcionais e específicos, que estimulam força, equilíbrio, coordenação e controle postural. O método também pode utilizar equipamentos terapêuticos que oferecem suporte seguro para a prática dos movimentos.
+
+O objetivo do Método TheraSuit é promover maior organização motora, melhorar a funcionalidade e ampliar a independência do paciente nas atividades do dia a dia, sempre respeitando as necessidades individuais de cada paciente.
+`,
+    imagens: [
+      teraS
     ]
   },
 
@@ -220,8 +228,7 @@ Adaptado às necessidades clínicas, contribui para melhora da postura,
 estabilidade, coordenação e funcionalidade global.
 `,
     imagens: [
-      imgAtendimento,
-      imgAtendimento
+      pilates
     ]
   },
 
@@ -237,8 +244,7 @@ promovendo relaxamento, fortalecimento muscular e ampliação das
 habilidades funcionais.
 `,
     imagens: [
-      imgAtendimento,
-      imgAtendimento
+      terapAq
     ]
   },
 
@@ -253,8 +259,7 @@ as condições clínicas e objetivos de cada paciente, com foco em
 qualidade de vida e autonomia.
 `,
     imagens: [
-      imgAtendimento,
-      imgAtendimento
+      edfisica
     ]
   },
 
@@ -268,8 +273,7 @@ A prescrição é personalizada e supervisionada, garantindo
 segurança e eficácia no processo de treinamento.
 `,
     imagens: [
-      imgAtendimento,
-      imgAtendimento
+      'NAO TEM FOTO'
     ]
   },
 
@@ -288,8 +292,7 @@ individualizados, promovendo desenvolvimento e fortalecimento
 de vínculos por meio da experiência musical.
 `,
     imagens: [
-      imgAtendimento,
-      imgAtendimento
+      music
     ]
   }
 }

@@ -1,6 +1,32 @@
-import clinicImg from "../../assets/clinic.jpg"
+import clinicImg1 from "../../assets/historia/his-1.webp"
+import clinicImg2 from "../../assets/historia/his-2.webp"
+import clinicImg3 from "../../assets/historia/his-3.webp"
+import clinicImg4 from "../../assets/historia/his-4.webp"
+import clinicImg5 from "../../assets/historia/his-5.webp"
+import clinicImg6 from "../../assets/historia/his-6.webp"
+import clinicImg7 from "../../assets/historia/his-7.webp"
+import clinicImg8 from "../../assets/historia/his-8.webp"
+import clinicImg9 from "../../assets/historia/his-9.webp"
+import clinicImg10 from "../../assets/historia/his-10.webp"
+import clinicImg11 from "../../assets/historia/his-11.webp"
+import clinicImg12 from "../../assets/historia/his-12.webp"
+
 import ImageCarousel from "../ImageCarousel"
 export default function About() {
+  const imgList = [
+    clinicImg1,
+    clinicImg2,
+    clinicImg3,
+    clinicImg4,
+    clinicImg5,
+    clinicImg6,
+    clinicImg7,
+    clinicImg8,
+    clinicImg9,
+    clinicImg10,
+    clinicImg11,
+    clinicImg12
+  ]
   return (
     <section id="sobre" className="py-24 bg-white scroll-mt-24">
       <div className="max-w-6xl mx-auto px-6">
@@ -17,11 +43,11 @@ export default function About() {
         </div>
 
         {/* CONTEÚDO PRINCIPAL */}
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
 
           {/* IMAGEM */}
-          <div>
-            <ImageCarousel images={[clinicImg, clinicImg, clinicImg]} height="300px" />
+          <div className="min-w-0" >
+            <ImageCarousel images={imgList} />
           </div>
 
           {/* TEXTO ESTRUTURADO */}
