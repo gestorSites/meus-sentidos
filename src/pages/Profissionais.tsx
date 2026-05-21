@@ -22,7 +22,7 @@ export default function ProfissionalPage() {
   return (
     <div className="pt-24">
       <NavigateButton />
-      <div className="max-w-5xl mx-auto px-6 pb-24">
+      <div className="max-w-5xl mx-auto px-6 pb-24 pt-2">
         <div className="grid md:grid-cols-2 gap-12 items-start">
 
 
@@ -30,6 +30,7 @@ export default function ProfissionalPage() {
             <img
               src={profissional.foto}
               alt={profissional.nome}
+              loading="lazy"
               className="rounded-2xl shadow-lg w-full object-cover"
             />
           </Reveal>

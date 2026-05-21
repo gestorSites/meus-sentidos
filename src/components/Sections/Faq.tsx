@@ -1,23 +1,25 @@
 import Accordion from "../Accordion"
-import atendimento from "../../assets/atendimentoInf.jpg"
+import atendimento from "../../assets/faq.webp"
 import Reveal from "../Reveal"
 
 export default function FAQ() {
   const faqs = [
     {
-      title: "O que é o TEA?",
+      title: "Como funciona a primeira reunião?",
       content:
-        "O Transtorno do Espectro Autista (TEA) é uma condição do neurodesenvolvimento que afeta a comunicação, o comportamento e a interação social.",
+        `A primeira etapa consiste em uma escuta acolhedora junto à família, com o objetivo de compreender a história do paciente, suas queixas e necessidades. Nesse momento inicial, também apresentamos a estrutura da clínica e o funcionamento da equipe multiprofissional. A partir dessa avaliação inicial, definimos, de forma individualizada, o melhor percurso a ser seguido, incluindo a quantidade de sessões necessárias para o processo avaliativo.`,
     },
     {
-      title: "Quais serviços a clínica oferece?",
+      title: "Os atendimentos são individualizados?",
       content:
-        "Oferecemos atendimento especializado com equipe multidisciplinar, incluindo ABA, fonoaudiologia, terapia ocupacional e psicologia.",
+        `Sim. Cada paciente é único, por isso os planos terapêuticos são personalizados de acordo com suas necessidades, respeitando seu tempo, suas potencialidades e desafios.
+Nossos profissionais trabalham de forma integrada, ajustando as estratégias sempre que necessário, para garantir um acompanhamento efetivo, acolhedor e alinhado com a evolução de cada paciente e sua família.`,
     },
     {
-      title: "Como funciona o primeiro atendimento?",
+      title: "Como faço para agendar um atendimento?",
       content:
-        "O primeiro atendimento é uma avaliação inicial para entender as necessidades da criança e orientar a família.",
+        `Você pode entrar em contato pelo WhatsApp ou telefone da clínica. Nossa equipe está preparada para te acolher, entender sua necessidade e orientar em todo o processo de agendamento.
+Nosso horário de atendimento é de segunda a sexta-feira, das 07h às 17h45, e teremos prazer em encontrar o melhor horário para você e sua família.`,
     },
   ]
 
@@ -43,6 +45,7 @@ export default function FAQ() {
           {/* IMAGEM */}
           <div className="flex justify-center">
             <img
+              loading="lazy"
               src={atendimento} // coloque sua imagem na pasta public
               alt="Atendimento infantil"
               className="rounded-3xl shadow-lg object-cover w-full max-w-md"

@@ -28,6 +28,7 @@ export default function ImageCarousel({
             <img
               src={img}
               alt="Imagem"
+              loading="lazy"
               style={{ height }}
               className="w-full object-cover transition duration-700 hover:scale-105 cursor-grab"
             />

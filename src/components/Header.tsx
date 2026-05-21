@@ -13,7 +13,7 @@ const menu = [
     { label: "Profissionais", href: "/profissionais" },
     { label: "FAQ", id: "faq" },
     { label: "Contato", id: "contato" },
-    { label: "Avaliações", href: "/avaliacoes" }
+    { label: "Avaliações", href: "/avaliacoes" },
 ]
 const specialties = [
     { label: "Psicologia", href: "/especialidades#psicologia" },
@@ -34,6 +34,14 @@ const specialties = [
     { label: "Musculação", href: "/especialidades#musculacao" },
 ]
 
+const empresasLinks = [
+    { label: "Análise Ergonômica", href: "/empresas#analise_ergonomica" },
+    { label: "Assessoria em Ergonomia", href: "/empresas#assessoria_ergonomia" },
+    { label: "Projetos / Planos de Ação", href: "/empresas#projetos_planos_acao" },
+    { label: "Palestras e Treinamentos", href: "/empresas#palestras_treinamentos" },
+    { label: "Inclusão da Pessoa com Deficiência", href: "/empresas#inclusao_pcd" },
+]
+
 
 export default function Header() {
     const location = useLocation()
@@ -42,6 +50,7 @@ export default function Header() {
 
     const active = useActiveSection(sections)
     const [openOthersMobile, setOpenOthersMobile] = useState(false)
+    const [openEmpresasMobile, setOpenEmpresasMobile] = useState(false)
 
     useEffect(() => {
         const onScroll = () => setScrolled(window.scrollY > 10)
@@ -72,7 +81,7 @@ export default function Header() {
                     />
                 </a>
 
-                <nav className="hidden md:flex items-center gap-8">
+                <nav className="hidden md:flex items-center gap-4">
                     {menu.map((item) => {
                         const isActive = item.id && active === item.id
 
@@ -138,7 +147,26 @@ export default function Header() {
                         </div>
                     </div>
 
+                    <div className="relative group">
+                        <div className="flex items-center gap-1 cursor-pointer text-gray-700 hover:text-blue-600 transition-all">
+                            <span>Empresas</span>
+                            <span className="text-xs transition-transform duration-200 group-hover:rotate-180">
+                                <ChevronDown size={16} />
+                            </span>
+                        </div>
 
+                        <div className="absolute top-full mt-3 right-0 w-72 bg-white rounded-xl shadow-lg border py-2 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200">
+                            {empresasLinks.map((link) => (
+                                <a
+                                    key={link.href}
+                                    href={link.href}
+                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
+                                >
+                                    {link.label}
+                                </a>
+                            ))}
+                        </div>
+                    </div>
 
                     <a
                         href="https://wa.me/5516992832613"
@@ -202,6 +230,32 @@ export default function Header() {
                         {openOthersMobile && (
                             <div className="mt-2 ml-4 flex flex-col gap-2">
                                 {specialties.map((link) => (
+                                    <a
+                                        key={link.href}
+                                        href={link.href}
+                                        onClick={() => setOpen(false)}
+                                        className="text-sm text-gray-600 hover:text-blue-600 transition"
+                                    >
+                                        {link.label}
+                                    </a>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                    <div>
+                        <button
+                            onClick={() => setOpenEmpresasMobile(!openEmpresasMobile)}
+                            className="w-full flex justify-between items-center font-medium text-gray-700"
+                        >
+                            Empresas
+                            <span className={clsx("transition", openEmpresasMobile && "rotate-180")}>
+                                ▾
+                            </span>
+                        </button>
+
+                        {openEmpresasMobile && (
+                            <div className="mt-2 ml-4 flex flex-col gap-2">
+                                {empresasLinks.map((link) => (
                                     <a
                                         key={link.href}
                                         href={link.href}

@@ -7,15 +7,23 @@ export type Profissional = {
 }
 import person from "../assets/profissionais/person.webp"
 import camilaFer from "../assets/profissionais/CAMILA-FERNANDES.webp"
-// import camilaPolo from "../assets/profissionais/CAMILLA-POLO.webp"
-import darling from "../assets/profissionais/DARLING.webp"
+import camilaPolo from "../assets/profissionais/CAMILLA-POLO.webp"
 import eduardo from "../assets/profissionais/EDUARDO.webp"
 import gabriela from "../assets/profissionais/GABRIELLA.webp"
 import leticiaBri from "../assets/profissionais/LETICIA-BRITO.webp"
 import mariaFla from "../assets/profissionais/MARIA-FLAVIA.webp"
-import mariano from "../assets/profissionais/MARIANO.webp"
 import ruth from "../assets/profissionais/RUTH.webp"
 import tiffany from "../assets/profissionais/TIFFANY.webp"
+import rafael from "../assets/profissionais/RAFAEL_MUSICOTERAPEUTA.webp"
+import leticiaLirian from "../assets/profissionais/LETICIA_LIRIAN_BATISTA.webp"
+import francielly from "../assets/profissionais/FRANCIELLY_CAROLINE.webp"
+import natalia from "../assets/profissionais/NATALIA_SILVA_GARCIA.webp"
+import camilaBusqueiro from "../assets/profissionais/CAMILA_BUSQUEIRO.webp"
+import rafaella from "../assets/profissionais/RAFAELLA_ORLANDO.webp"
+import alexia from "../assets/profissionais/ALEXIA_VITORIA.webp"
+import leonara from "../assets/profissionais/LEONARA.webp"
+import anaLivia from "../assets/profissionais/ANA_LIVIA_OLIVEIRA.webp"
+import josiane from "../assets/profissionais/JOSIANE.webp"
 
 
 export const profissionais: Record<string, Profissional> = {
@@ -23,7 +31,7 @@ export const profissionais: Record<string, Profissional> = {
   francielly_caroline: {
     nome: "Francielly Caroline",
     cargo: "Terapeuta Ocupacional e Diretora Clínica",
-    foto: person,
+    foto: francielly,
     area: "Terapia Ocupacional",
     curriculo: [
       "Terapeuta Ocupacional graduada pela Universidade de São Paulo (USP)",
@@ -39,7 +47,7 @@ export const profissionais: Record<string, Profissional> = {
   natalia_silva_garcia: {
     nome: "Natália Silva Garcia",
     cargo: "Terapeuta Ocupacional",
-    foto: person,
+    foto: natalia,
     area: "Terapia Ocupacional",
     curriculo: [
       "Terapeuta Ocupacional formada pela Universidade Federal do Triângulo Mineiro (UFTM)",
@@ -48,20 +56,6 @@ export const profissionais: Record<string, Profissional> = {
       "Curso Introdutório de Integração Sensorial",
       "Curso em Funções Executivas no Transtorno do Espectro Autista",
       "Curso Desfralde – estratégias eficazes"
-    ]
-  },
-
-  maria_eduarda_freire: {
-    nome: "Maria Eduarda Freire",
-    cargo: "Terapeuta Ocupacional",
-    foto: person,
-    area: "Terapia Ocupacional",
-    curriculo: [
-      "Terapeuta Ocupacional pelo Centro Universitário Claretiano",
-      "Especialista em Neurociência pela Universidade Federal de São Paulo – Baixada Santista",
-      "Certificação em Integração Sensorial de Ayres pela University of Southern California (USC)",
-      "Certificação em Escrita – Método PER",
-      "Certificação em ABA e Estratégias Naturalistas"
     ]
   },
 
@@ -77,22 +71,6 @@ export const profissionais: Record<string, Profissional> = {
       "Autismo: Inclusão e Recursos Terapêuticos",
       "ABA – Análise do Comportamento Aplicada",
       "Inclusão da Pessoa com Deficiência"
-    ]
-  },
-
-  darliani_guimaraes: {
-    nome: "Darliani Guimarães",
-    cargo: "Psicopedagoga e Terapeuta Ocupacional",
-    foto: darling,
-    area: "Terapia Ocupacional",
-    curriculo: [
-      "Graduada em Letras",
-      "Graduada em Pedagogia",
-      "Pós-graduada em Psicopedagogia",
-      "Pós-graduada em Educação Especial Inclusiva",
-      "Pós-graduada em Deficiência Física, Intelectual e Auditiva",
-      "Formação como Aplicadora ABA",
-      "Formação em Terapia Ocupacional"
     ]
   },
 
@@ -114,7 +92,7 @@ export const profissionais: Record<string, Profissional> = {
   camilla_da_silva_polo: {
     nome: "Camilla da Silva Polo",
     cargo: "Neuropsicopedagoga",
-    foto: person,
+    foto: camilaPolo,
     area: "Neuropsicopedagogia",
     curriculo: [
       "Licenciatura em Pedagogia",
@@ -144,7 +122,7 @@ export const profissionais: Record<string, Profissional> = {
     foto: mariaFla,
     area: "Fisioterapia",
     curriculo: [
-      "Fisioterapeuta pelo Centro Universitário Claretiano",
+      "Fisioterapeuta formada pelo Centro Universitário Claretiano",
       "Pós-graduação em Fisioterapia Ortopédica, Traumatológica e Desportiva",
       "Formação em Adequação Postural e Prescrição de Cadeira de Rodas",
       "Formação em Pilates Clínico e Funcional",
@@ -154,24 +132,20 @@ export const profissionais: Record<string, Profissional> = {
     ]
   },
 
-  mariano_cintra_de_castro: {
-    nome: "Mariano Cintra de Castro",
-    cargo: "Fonoaudiólogo e Neuromodulador",
-    foto: mariano,
+  alexia_vitoria: {
+    nome: "Aléxia Vitória",
+    cargo: "Fonoaudióloga",
+    foto: alexia,
     area: "Fonoaudiologia",
     curriculo: [
-      "Graduado em Fonoaudiologia",
-      "Especialista em Audiologia Clínica e Ocupacional",
-      "Participação no Encontro Brasileiro de Motricidade Orofacial",
-      "Participação em Congresso Clínico de Neuromodulação Não Invasiva",
-      "Formação em Neuromodulação Não Invasiva – CDCS"
+      "Informações a serem preenchidas"
     ]
   },
 
   josiane_teixeira: {
     nome: "Josiane Teixeira",
     cargo: "Fonoaudióloga",
-    foto: person,
+    foto: josiane,
     area: "Fonoaudiologia",
     curriculo: [
       "Fonoaudióloga pela Universidade de Franca",
@@ -184,7 +158,7 @@ export const profissionais: Record<string, Profissional> = {
   leonara_martins: {
     nome: "Leonara Martins",
     cargo: "Fonoaudióloga, Psicóloga e Coordenadora Clínica",
-    foto: person,
+    foto: leonara,
     area: "Fonoaudiologia",
     curriculo: [
       "Mestra em Promoção da Saúde pela Universidade de Franca",
@@ -201,10 +175,10 @@ export const profissionais: Record<string, Profissional> = {
   rafaella_orlando: {
     nome: "Rafaella Orlando",
     cargo: "Psicóloga e Coordenadora Clínica",
-    foto: person,
+    foto: rafaella,
     area: "Psicologia",
     curriculo: [
-      "Psicóloga pelo Uni-FACEF",
+      "Psicóloga pela Universidade Municipal de Franca (Uni-FACEF)",
       "Certificação Aplicadora ABA pelo CBI of Miami",
       "Certificação PEPI – Psicomotricidade Infantil",
       "Formação como Acompanhante Terapêutica",
@@ -220,7 +194,7 @@ export const profissionais: Record<string, Profissional> = {
     foto: tiffany,
     area: "Psicologia",
     curriculo: [
-      "Psicóloga pelo Uni-FACEF",
+      "Psicóloga pela Universidade Municipal de Franca (Uni-FACEF)",
       "Pós-graduação em ABA e Estratégias Naturalísticas",
       "Pós-graduação em ABA para TEA",
       "Formação como Acompanhante Terapêutica",
@@ -235,7 +209,7 @@ export const profissionais: Record<string, Profissional> = {
     foto: camilaFer,
     area: "Psicologia",
     curriculo: [
-      "Psicóloga pelo Uni-FACEF",
+      "Psicóloga pela Universidade Municipal de Franca (Uni-FACEF)",
       "Neuropsicóloga pela FAPSI",
       "Pós-graduação em ABA para TEA",
       "Certificação Aplicadora ABA pelo CBI of Miami"
@@ -245,7 +219,7 @@ export const profissionais: Record<string, Profissional> = {
   leticia_lirian_batista: {
     nome: "Leticia Lirian Batista",
     cargo: "Psicóloga",
-    foto: person,
+    foto: leticiaLirian,
     area: "Psicologia",
     curriculo: [
       "Psicóloga pela Universidade de Franca",
@@ -256,12 +230,24 @@ export const profissionais: Record<string, Profissional> = {
   camila_busqueiro: {
     nome: "Camila Busqueiro",
     cargo: "Psicóloga",
-    foto: person,
+    foto: camilaBusqueiro,
     area: "Psicologia",
     curriculo: [
-      "Psicóloga pelo Uni-FACEF",
+      "Psicóloga pela Universidade Municipal de Franca (Uni-FACEF)",
       "Formação como Acompanhante Terapêutica",
       "Aplicadora ABA"
+    ]
+  },
+
+  ana_livia_oliveira: {
+    nome: "Ana Livia Oliveira",
+    cargo: "Psicóloga",
+    foto: anaLivia,
+    area: "Psicologia",
+    curriculo: [
+      "Psicóloga com Bacharel pela Unifran – Universidade de Franca",
+      "Pós-graduanda em Análise do Comportamento Aplicada (ABA) para TEA pela Faculdade Metropolitana",
+      "Pós-graduanda em PBE Terapias Cognitivas Comportamentais – Fernanda Landeiro"
     ]
   },
 
@@ -271,8 +257,21 @@ export const profissionais: Record<string, Profissional> = {
     foto: gabriela,
     area: "Psicologia",
     curriculo: [
-      "Graduada em Psicologia pelo Uni-FACEF",
+      "Graduada em Psicologia pela Universidade Municipal de Franca (Uni-FACEF)",
       "Aplicadora ABA pelo Instituto Neuro"
+    ]
+  },
+
+  rafael: {
+    nome: "Rafael",
+    cargo: "Musicoterapeuta",
+    foto: rafael,
+    area: "Musicoterapia",
+    curriculo: [
+      "Musicoterapia pela Faculdade Metropolitana de Ribeirão Preto",
+      "Licenciando em Música pelo Conservatório Brasileiro de Música",
+      "Aplicador ABA pelo CBI of Miami",
+      "Professor particular de canto e piano"
     ]
   }
 

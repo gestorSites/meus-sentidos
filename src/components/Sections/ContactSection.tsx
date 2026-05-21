@@ -13,7 +13,7 @@ export default function ContactSection() {
           <div className="bg-gradient-to-br from-blue-400 to-blue-600 p-12 text-white flex items-center">
             <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl">
               <h2 className="text-3xl font-semibold mb-6 leading-snug">
-                Dê o primeiro passo para a evolução da sua criança
+                Comece agora um acompanhamento especializado
               </h2>
 
               <p className="text-white/90 mb-4">

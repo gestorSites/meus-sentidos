@@ -2,13 +2,13 @@ import clinicImg from "../../assets/FAIXADA-CLINICA.jpeg"
 import Reveal from "../Reveal"
 
 
-import banner1 from "../../assets/banner.webp"
+import banner1 from "../../assets/BANNER_1.webp"
+import banner2 from "../../assets/BANNER_2.webp"
 import HeroCarousel from "./HeroCarousel"
 
 const banners = [
-  { src: banner1, alt: "Clínica Meus Sentidos" },
-  { src: banner1, alt: "Atendimento infantil especializado" },
-  { src: banner1, alt: "Equipe multidisciplinar" },
+  { src: banner1, alt: "Onde o desenvolvimento ganha forma e o cuidado faz sentido." },
+  { src: banner2, alt: "Uma clinica completa para você e sua família! Acompanhamento terapeutico individualizado para cada faze do desenvolvimento." },
 ]
 
 export default function Hero() {
@@ -21,14 +21,16 @@ export default function Hero() {
           <div>
             <Reveal>
               <h1 className="text-xl md:text-2xl font-bold text-[#1177E3] leading-tight">
-                Cuidado especializado para crianças e adolescentes com TEA
+                Cuidado especializado para o desenvolvimento e bem-estar
               </h1>
             </Reveal>
 
             <Reveal delay={0.2}>
               <p className="mt-6 text-lg text-gray-700">
-                A Clínica Meus Sentidos oferece atendimento humanizado,
-                individualizado e baseado em evidências.
+                A Clínica Meus Sentidos oferece atendimento humanizado, individualizado e
+                fundamentado em evidências científicas. Nosso cuidado é voltado para pessoas em
+                diferentes fases da vida, considerando suas necessidades, particularidades e promovendo
+                autonomia e qualidade de vida.
               </p>
             </Reveal>
 

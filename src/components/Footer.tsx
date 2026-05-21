@@ -21,6 +21,7 @@ export default function Footer() {
               src={logoMeusSentidos2}
               alt="Clínica Meus Sentidos"
               className="w-32"
+              loading="lazy"
             />
           </Reveal>
           <Reveal delay={0.4}>

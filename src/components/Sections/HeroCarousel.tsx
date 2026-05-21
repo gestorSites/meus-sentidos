@@ -34,6 +34,7 @@ export default function HeroCarousel({ images, interval = 5000 }: Props) {
             <img
               src={img.src}
               alt={img.alt}
+              loading="lazy"
               className="w-full h-full object-cover"
             />
           </SwiperSlide>

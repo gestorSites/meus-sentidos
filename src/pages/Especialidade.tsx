@@ -41,7 +41,7 @@ export default function EspecialidadesPage() {
             <div className={`min-w-0 ${imagemDireita ? "" : "md:order-2"}`}>
 
               <Reveal>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+                <h2 className="inline-block bg-[#1177E3] text-white px-4 py-2 rounded-lg text-lg sm:text-xl md:text-2xl font-semibold mb-4">
                   {especialidade.titulo}
                 </h2>
               </Reveal>
