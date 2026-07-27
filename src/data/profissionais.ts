@@ -5,7 +5,6 @@ export type Profissional = {
   area: string
   curriculo: string[]
 }
-import person from "../assets/profissionais/person.webp"
 import camilaFer from "../assets/profissionais/CAMILA-FERNANDES.webp"
 import camilaPolo from "../assets/profissionais/CAMILLA-POLO.webp"
 import eduardo from "../assets/profissionais/EDUARDO.webp"
