@@ -3,7 +3,7 @@ import clsx from "clsx"
 import logoMeusSentidos2 from "../assets/logoMSM.png"
 import { useActiveSection } from "../hooks/useActiveSection"
 import { ChevronDown } from "lucide-react"
-import { useLocation } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 
 const sections = ["home", "sobre", "especialidades", "faq", "contato"]
 
@@ -69,8 +69,8 @@ export default function Header() {
         >
             <div className="h-[6px] w-full bg-gradient-to-r from-[#F2D13D] via-[#5BC0EB] to-[#0B3C49]" />
             <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-                <a
-                    href="/"
+                <Link
+                    to="/"
                     className="flex items-center gap-3 font-semibold text-[#1177E3]"
                 >
                     <img
@@ -79,16 +79,16 @@ export default function Header() {
                         loading="lazy"
                         className="h-10 object-cover"
                     />
-                </a>
+                </Link>
 
                 <nav className="hidden md:flex items-center gap-4">
                     {menu.map((item) => {
                         const isActive = item.id && active === item.id
 
                         return (
-                            <a
+                            <Link
                                 key={item.label}
-                                href={
+                                to={
                                     item.href
                                         ? item.href
                                         : location.pathname === "/"
@@ -107,7 +107,7 @@ export default function Header() {
                                 {isActive && (
                                     <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-600 rounded-full" />
                                 )}
-                            </a>
+                            </Link>
                         )
                     })}
                     <div className="relative group">
@@ -135,14 +135,13 @@ export default function Header() {
         "
                         >
                             {specialties.map((link) => (
-                                <a
+                                <Link
                                     key={link.href}
-                                    href={link.href}
-                                    target='_self'
+                                    to={link.href}
                                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
                                 >
                                     {link.label}
-                                </a>
+                                </Link>
                             ))}
                         </div>
                     </div>
@@ -157,13 +156,13 @@ export default function Header() {
 
                         <div className="absolute top-full mt-3 right-0 w-72 bg-white rounded-xl shadow-lg border py-2 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200">
                             {empresasLinks.map((link) => (
-                                <a
+                                <Link
                                     key={link.href}
-                                    href={link.href}
+                                    to={link.href}
                                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
                                 >
                                     {link.label}
-                                </a>
+                                </Link>
                             ))}
                         </div>
                     </div>
@@ -196,9 +195,9 @@ export default function Header() {
             >
                 <nav className="bg-white border-t px-6 py-4 flex flex-col gap-4">
                     {menu.map((item) => (
-                        <a
-                            key={item.id}
-                            href={
+                        <Link
+                            key={item.label}
+                            to={
                                 item.href
                                     ? item.href
                                     : location.pathname === "/"
@@ -214,7 +213,7 @@ export default function Header() {
                             )}
                         >
                             {item.label}
-                        </a>
+                        </Link>
                     ))}
                     <div>
                         <button
@@ -230,14 +229,14 @@ export default function Header() {
                         {openOthersMobile && (
                             <div className="mt-2 ml-4 flex flex-col gap-2">
                                 {specialties.map((link) => (
-                                    <a
+                                    <Link
                                         key={link.href}
-                                        href={link.href}
+                                        to={link.href}
                                         onClick={() => setOpen(false)}
                                         className="text-sm text-gray-600 hover:text-blue-600 transition"
                                     >
                                         {link.label}
-                                    </a>
+                                    </Link>
                                 ))}
                             </div>
                         )}
@@ -256,14 +255,14 @@ export default function Header() {
                         {openEmpresasMobile && (
                             <div className="mt-2 ml-4 flex flex-col gap-2">
                                 {empresasLinks.map((link) => (
-                                    <a
+                                    <Link
                                         key={link.href}
-                                        href={link.href}
+                                        to={link.href}
                                         onClick={() => setOpen(false)}
                                         className="text-sm text-gray-600 hover:text-blue-600 transition"
                                     >
                                         {link.label}
-                                    </a>
+                                    </Link>
                                 ))}
                             </div>
                         )}
