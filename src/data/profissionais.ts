@@ -23,6 +23,12 @@ import alexia from "../assets/profissionais/ALEXIA_VITORIA.webp"
 import leonara from "../assets/profissionais/LEONARA.webp"
 import anaLivia from "../assets/profissionais/ANA_LIVIA_OLIVEIRA.webp"
 import josiane from "../assets/profissionais/JOSIANE.webp"
+import jhonny from "../assets/profissionais/JHONNY_ALMEIDA.webp"
+import brenda from "../assets/profissionais/BRENDA_ALMEIDA.webp"
+import lara from "../assets/profissionais/LARA_MARRA.webp"
+import carolina from "../assets/profissionais/CAROLINA_CANTARINO.webp"
+import paula from "../assets/profissionais/PAULA_ANGELA_MENEGHETTI.webp"
+import thatiane from "../assets/profissionais/THATIANE_DANIELLY_SANTOS.webp"
 
 
 export const profissionais: Record<string, Profissional> = {
@@ -70,6 +76,33 @@ export const profissionais: Record<string, Profissional> = {
       "Autismo: Inclusão e Recursos Terapêuticos",
       "ABA – Análise do Comportamento Aplicada",
       "Inclusão da Pessoa com Deficiência"
+    ]
+  },
+
+  brenda_almeida: {
+    nome: "Brenda Almeida",
+    cargo: "Terapeuta Ocupacional",
+    foto: brenda,
+    area: "Terapia Ocupacional",
+    curriculo: [
+      "Terapeuta Ocupacional graduada pela Universidade Federal do Triângulo Mineiro (UFTM)",
+      "Pós-graduação em andamento em Integração Sensorial no Desenvolvimento Infantil (Sensory Educacional)",
+      "Curso em Integração Sensorial: raciocínio clínico aplicado ao TEA (Sensory Educacional)",
+      "Curso em Motricidade Fina no Desenvolvimento Infantil e na Vida Diária (Inclusão Eficiente)",
+      "Curso em Integração Sensorial de Ayres: do conceito à intervenção (Miriam Arvelino)",
+      "Formação Básica e Avançada no Método Therapy Taping (Therapy Taping Association)"
+    ]
+  },
+
+  lara_marra: {
+    nome: "Lara Marra",
+    cargo: "Terapeuta Ocupacional",
+    foto: lara,
+    area: "Terapia Ocupacional",
+    curriculo: [
+      "Terapeuta Ocupacional formada pela Universidade Federal do Triângulo Mineiro (UFTM)",
+      "Extensão no ambulatório de pediatria, no projeto de estimulação precoce",
+      "Participante do Congresso Brasileiro de Terapia Ocupacional 2025"
     ]
   },
 
@@ -128,6 +161,19 @@ export const profissionais: Record<string, Profissional> = {
       "Formação em Kinesio Taping",
       "Formação Internacional Therasuit Method",
       "Formação em Psicomotricidade"
+    ]
+  },
+
+  carolina_cantarino: {
+    nome: "Carolina Cantarino",
+    cargo: "Fisioterapeuta",
+    foto: carolina,
+    area: "Fisioterapia",
+    curriculo: [
+      "Fisioterapeuta formada pela Universidade de Franca (Unifran)",
+      "Pós-graduação em andamento em Neurofuncional Adulto e Infantil (Unifran)",
+      "Fisioterapia em Home Care (Ibraesp)",
+      "Capacitação em Comunicação Alternativa e Aumentativa"
     ]
   },
 
@@ -261,6 +307,18 @@ export const profissionais: Record<string, Profissional> = {
     ]
   },
 
+  jhonny_almeida: {
+    nome: "Jhonny Almeida",
+    cargo: "Psicólogo",
+    foto: jhonny,
+    area: "Psicologia",
+    curriculo: [
+      "Psicólogo pela Universidade de Franca (Unifran)",
+      "Treinamento em Acompanhamento Terapêutico no ambiente escolar",
+      "Pós-graduação em andamento em ABA – Análise do Comportamento Aplicada (FAVENI)"
+    ]
+  },
+
   rafael: {
     nome: "Rafael",
     cargo: "Musicoterapeuta",
@@ -271,6 +329,31 @@ export const profissionais: Record<string, Profissional> = {
       "Licenciando em Música pelo Conservatório Brasileiro de Música",
       "Aplicador ABA pelo CBI of Miami",
       "Professor particular de canto e piano"
+    ]
+  },
+
+  paula_angela_meneghetti: {
+    nome: "Paula Angela Meneghetti",
+    cargo: "Nutricionista",
+    foto: paula,
+    area: "Nutrição",
+    curriculo: [
+      "Nutricionista graduada pela Universidade de Franca (Unifran)",
+      "Pós-graduada em Nutrição Materno-Infantil (Centro de Nutrição Funcional – VP)",
+      "Pós-graduação em andamento em Nutrição Funcional e Terapia Alimentar no Autismo e TDAH (Academia do Autismo)",
+      "Formação em ABA e Estratégias Naturalistas (Instituto Singular)",
+      "MBA em Administração pela Faculdade de Economia, Administração e Contabilidade de Ribeirão Preto (USP)"
+    ]
+  },
+
+  thatiane_danielly_santos: {
+    nome: "Thatiane Danielly Santos",
+    cargo: "Nutricionista",
+    foto: thatiane,
+    area: "Nutrição",
+    curriculo: [
+      "Nutricionista formada pela Universidade de Franca (Unifran)",
+      "Mestre em Saúde da Criança e do Adolescente pela FMRP/USP"
     ]
   }
 
