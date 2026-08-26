@@ -96,10 +96,23 @@ export default function EmpresasPage() {
 
               </div>
 
-              <div className={`rounded-2xl bg-blue-50 p-10 flex items-center justify-center min-h-48 ${textoEsquerda ? "" : "md:order-1"}`}>
-                <p className="text-blue-300 text-sm italic text-center">
-                  Imagem a ser adicionada
-                </p>
+              <div className={textoEsquerda ? "" : "md:order-1"}>
+                {servico.imagem ? (
+                  <Reveal>
+                    <img
+                      src={servico.imagem}
+                      alt={servico.titulo}
+                      loading="lazy"
+                      className="rounded-2xl object-cover w-full aspect-[3/2] shadow-sm transition-all duration-300 hover:scale-105"
+                    />
+                  </Reveal>
+                ) : (
+                  <div className="rounded-2xl bg-blue-50 p-10 flex items-center justify-center min-h-48">
+                    <p className="text-blue-300 text-sm italic text-center">
+                      Imagem a ser adicionada
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
 

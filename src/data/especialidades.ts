@@ -15,8 +15,13 @@ import neuroPs from "../assets/locais/NEUROPSICOPEDAGOGIA.webp"
 import pilates from "../assets/locais/PILATES.webp"
 import psico from "../assets/locais/PSICOLOGIA.webp"
 import terapAq from "../assets/locais/TERAPIA_AQUATICA.webp"
-import terapOq from "../assets/locais/TERAPIA_OCUPACIONAL .webp"
+import terapOq from "../assets/locais/TERAPIA_OCUPACIONAL.webp"
 import teraS from "../assets/locais/THERASUIT.webp"
+import aba from "../assets/locais/ABA.webp"
+import laser from "../assets/locais/LASERTERAPIA.webp"
+import reforco from "../assets/locais/REFORCO_ESCOLAR.webp"
+import integracao from "../assets/locais/INTEGRACAO_SENSORIAL.webp"
+import musculacao from "../assets/locais/MUSCULACAO.webp"
 
 export const especialidades: Record<string, Especialidade> = {
   psicologia: {
@@ -49,7 +54,7 @@ As intervenções são planejadas a partir de avaliação funcional criteriosa,
 com metas individualizadas e monitoramento contínuo de resultados.
 `,
     imagens: [
-      edfisica
+      aba
     ]
   },
 
@@ -65,9 +70,7 @@ trabalhadas em terapia.
 O AT atua como mediador entre o paciente e o ambiente, promovendo participação ativa,
 adaptação às demandas sociais e fortalecimento da independência funcional.
 `,
-    imagens: [
-      'NAO TEM FOTO'
-    ]
+    imagens: []
   },
 
   fonoaudiologia: {
@@ -99,7 +102,7 @@ contribuindo para cicatrização tecidual, modulação da dor e melhora funciona
 sempre com aplicação segura e respaldada por critérios técnicos.
 `,
     imagens: [
-      'NAO TEM FOTO'
+      laser
     ]
   },
 
@@ -148,7 +151,7 @@ e autonomia frente ao processo de aprendizagem.
 O objetivo é fortalecer o desempenho escolar e a autoconfiança.
 `,
     imagens: [
-      'NAO TEM FOTO'
+      reforco
     ]
   },
 
@@ -182,7 +185,7 @@ autorregulação, planejamento motor, atenção e desempenho funcional
 nas atividades do dia a dia.
 `,
     imagens: [
-      'NAO TEM FOTO'
+      integracao
     ]
   },
 
@@ -273,7 +276,7 @@ A prescrição é personalizada e supervisionada, garantindo
 segurança e eficácia no processo de treinamento.
 `,
     imagens: [
-      'NAO TEM FOTO'
+      musculacao
     ]
   },
 

@@ -75,7 +75,7 @@ export default function EspecialidadesPage() {
                   <img
                     src={img}
                     loading="lazy"
-                    className="rounded-xl object-cover w-full transition-all duration-300 hover:scale-105"
+                    className="rounded-xl object-cover w-full aspect-[3/2] transition-all duration-300 hover:scale-105"
                   />
                 </Reveal>
               ))}
