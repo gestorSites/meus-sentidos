@@ -90,5 +90,7 @@ Para gerar o ZIP:
 O -r inclui o .htaccess, que é um arquivo oculto. Confira que ele está no ZIP:
   unzip -l meus-sentidos-site.zip | grep htaccess
 
-Instruções para quem vai subir: ENTREGA.md
+Envie o ENTREGA.md JUNTO do ZIP (não dentro dele: viraria uma página pública
+no domínio do cliente). É ele que explica a regra de reescrita, sem a qual só
+a página inicial funciona.
 `)
