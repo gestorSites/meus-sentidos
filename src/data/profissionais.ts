@@ -323,6 +323,7 @@ export const profissionais: Record<string, Profissional> = {
     nome: "Jhonny Almeida",
     cargo: "Psicólogo",
     foto: jhonny,
+    foco: "50% 0%",
     area: "Psicologia",
     curriculo: [
       "Psicólogo pela Universidade de Franca (Unifran)",
