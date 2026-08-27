@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "build:pages": "tsc -b && GH_PAGES=true vite build",
+    "build:entrega": "node scripts/build-entrega.mjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },

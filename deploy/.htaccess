@@ -1,0 +1,30 @@
+# Clínica Meus Sentidos — configuração para Apache
+# Este arquivo precisa ficar na MESMA pasta que o index.html.
+# Requer o módulo mod_rewrite habilitado no servidor.
+#
+# Sem esta regra, só a página inicial funciona: abrir /profissionais
+# direto na URL (ou dar F5 numa página interna) retorna erro 404.
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Arquivos e pastas que existem de verdade são servidos normalmente
+  # (imagens, CSS, JS, sitemap.xml, og-image.jpg...).
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Qualquer outro endereço entrega o index.html; o site resolve a rota.
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# ---------------------------------------------------------------------------
+# OPCIONAL — redirecionar o domínio sem www para o com www.
+# Descomente APENAS se este redirecionamento ainda não estiver configurado
+# no painel da hospedagem. Ter os dois lugares fazendo isso causa loop.
+# ---------------------------------------------------------------------------
+# <IfModule mod_rewrite.c>
+#   RewriteCond %{HTTP_HOST} ^meussentidos\.com\.br$ [NC]
+#   RewriteRule ^(.*)$ https://www.meussentidos.com.br/$1 [R=301,L]
+# </IfModule>

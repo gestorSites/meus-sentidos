@@ -1,0 +1,33 @@
+# Clínica Meus Sentidos — exemplo para nginx
+#
+# ESTE ARQUIVO NÃO É USADO PELO SITE. É um modelo: copie o bloco
+# "location /" para dentro do server { } que já atende o domínio e
+# recarregue o nginx (nginx -t && systemctl reload nginx).
+#
+# Sem a diretiva try_files, só a página inicial funciona: abrir
+# /profissionais direto na URL (ou dar F5 numa página interna) dá 404.
+
+server {
+    listen 443 ssl;
+    server_name www.meussentidos.com.br;
+
+    # Pasta onde os arquivos do site foram colocados:
+    root /var/www/meussentidos;
+    index index.html;
+
+    # ESTE É O TRECHO ESSENCIAL:
+    # qualquer endereço que não seja um arquivo real entrega o index.html.
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+}
+
+# Redirecionamento do domínio sem www para o com www.
+# Sem ele, o mesmo site responde em dois endereços e o canonical não bate.
+# Use apenas se ainda não houver esse redirecionamento em outro lugar.
+#
+# server {
+#     listen 443 ssl;
+#     server_name meussentidos.com.br;
+#     return 301 https://www.meussentidos.com.br$request_uri;
+# }
