@@ -319,7 +319,7 @@ export const profissionais: Record<string, Profissional> = {
     ]
   },
 
-  rafael: {
+  rafael_musicoterapeuta: {
     nome: "Rafael",
     cargo: "Musicoterapeuta",
     foto: rafael,
