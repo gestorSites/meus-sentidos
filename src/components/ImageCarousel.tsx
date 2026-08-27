@@ -8,6 +8,8 @@ import "swiper/css/pagination"
 type CarouselImage = {
   src: string
   alt: string
+  /** object-position, para foto vertical que precisa de outro corte na faixa */
+  foco?: string
 }
 
 type ImageCarouselProps = {
@@ -34,7 +36,7 @@ export default function ImageCarousel({
               src={img.src}
               alt={img.alt}
               loading="lazy"
-              style={{ height }}
+              style={{ height, objectPosition: img.foco }}
               className="w-full object-cover transition duration-700 hover:scale-105 cursor-grab"
             />
           </div>
