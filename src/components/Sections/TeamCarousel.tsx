@@ -44,6 +44,7 @@ export default function TeamCarousel() {
               <Link to={`/profissionais/${slug}`} className="block h-full">
                 <TeamCard
                   image={person.foto}
+                  foco={person.foco}
                   name={person.nome}
                   role={person.cargo}
                 />

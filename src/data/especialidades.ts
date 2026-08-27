@@ -2,6 +2,8 @@ export type Especialidade = {
   titulo: string
   descricao: string
   imagens: string[]
+  /** object-position da foto, quando o corte padrao (centro) nao serve */
+  foco?: string
   subtitulo?: string
   beneficiosTitulo?: string
   beneficios?: string[]
@@ -56,21 +58,6 @@ com metas individualizadas e monitoramento contínuo de resultados.
     imagens: [
       aba
     ]
-  },
-
-  "acompanhamento-terapeutico": {
-    titulo: "Acompanhamento Terapêutico (AT)",
-    descricao: `
-O Acompanhamento Terapêutico é uma modalidade de intervenção realizada em contextos
-naturais, como escola, domicílio e comunidade.
-
-Seu objetivo é favorecer a inclusão, autonomia e generalização das habilidades
-trabalhadas em terapia.
-
-O AT atua como mediador entre o paciente e o ambiente, promovendo participação ativa,
-adaptação às demandas sociais e fortalecimento da independência funcional.
-`,
-    imagens: []
   },
 
   fonoaudiologia: {
@@ -137,7 +124,8 @@ habilidades, respeitando o perfil neurocognitivo de cada paciente.
 `,
     imagens: [
       neuroPs
-    ]
+    ],
+    foco: "50% 65%"
   },
 
   "reforco-escolar": {
@@ -170,7 +158,8 @@ demandas e objetivos de cada paciente.
 `,
     imagens: [
       terapOq,
-    ]
+    ],
+    foco: "50% 70%"
   },
 
   "integracao-sensorial": {
@@ -186,7 +175,8 @@ nas atividades do dia a dia.
 `,
     imagens: [
       integracao
-    ]
+    ],
+    foco: "50% 75%"
   },
 
   fisioterapia: {
@@ -277,7 +267,8 @@ segurança e eficácia no processo de treinamento.
 `,
     imagens: [
       musculacao
-    ]
+    ],
+    foco: "50% 75%"
   },
 
   musicoterapia: {
@@ -296,7 +287,8 @@ de vínculos por meio da experiência musical.
 `,
     imagens: [
       music
-    ]
+    ],
+    foco: "50% 70%"
   }
 }
 export type EspecialidadeSlug = keyof typeof especialidades

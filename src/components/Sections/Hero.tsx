@@ -7,8 +7,14 @@ import banner2 from "../../assets/BANNER_2.webp"
 import HeroCarousel from "./HeroCarousel"
 
 const banners = [
-  { src: banner1, alt: "Onde o desenvolvimento ganha forma e o cuidado faz sentido." },
-  { src: banner2, alt: "Uma clinica completa para você e sua família! Acompanhamento terapeutico individualizado para cada faze do desenvolvimento." },
+  {
+    src: banner1,
+    alt: "Criança sorrindo ao lado de fotos das salas da clínica, com o texto: Uma clínica completa para você e sua família — acompanhamento terapêutico individualizado para cada fase do desenvolvimento.",
+  },
+  {
+    src: banner2,
+    alt: "Fachada da Clínica Meus Sentidos, com a placa das especialidades, e o texto: Onde o desenvolvimento ganha forma e o cuidado faz sentido.",
+  },
 ]
 
 export default function Hero() {

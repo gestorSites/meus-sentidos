@@ -104,6 +104,7 @@ export default function EmpresasPage() {
                       alt={servico.titulo}
                       loading="lazy"
                       className="rounded-2xl object-cover w-full aspect-[3/2] shadow-sm transition-all duration-300 hover:scale-105"
+                      style={{ objectPosition: servico.foco }}
                     />
                   </Reveal>
                 ) : (

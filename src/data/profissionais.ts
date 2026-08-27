@@ -2,6 +2,9 @@ export type Profissional = {
   nome: string
   cargo: string
   foto: string
+  /** object-position da foto. So tem efeito no recorte 1:1 (o circulo do
+      carrossel da Home); no grid 4:5 da Equipe a foto ja aparece inteira. */
+  foco?: string
   area: string
   curriculo: string[]
 }
@@ -13,7 +16,6 @@ import leticiaBri from "../assets/profissionais/LETICIA-BRITO.webp"
 import mariaFla from "../assets/profissionais/MARIA-FLAVIA.webp"
 import ruth from "../assets/profissionais/RUTH.webp"
 import tiffany from "../assets/profissionais/TIFFANY.webp"
-import rafael from "../assets/profissionais/RAFAEL_MUSICOTERAPEUTA.webp"
 import leticiaLirian from "../assets/profissionais/LETICIA_LIRIAN_BATISTA.webp"
 import francielly from "../assets/profissionais/FRANCIELLY_CAROLINE.webp"
 import natalia from "../assets/profissionais/NATALIA_SILVA_GARCIA.webp"
@@ -53,6 +55,7 @@ export const profissionais: Record<string, Profissional> = {
     nome: "Natália Silva Garcia",
     cargo: "Terapeuta Ocupacional",
     foto: natalia,
+    foco: "50% 5%",
     area: "Terapia Ocupacional",
     curriculo: [
       "Terapeuta Ocupacional formada pela Universidade Federal do Triângulo Mineiro (UFTM)",
@@ -68,6 +71,7 @@ export const profissionais: Record<string, Profissional> = {
     nome: "Ruth Oliveira Roque",
     cargo: "Terapeuta Ocupacional",
     foto: ruth,
+    foco: "50% 0%",
     area: "Terapia Ocupacional",
     curriculo: [
       "Graduação em Terapia Ocupacional",
@@ -110,6 +114,7 @@ export const profissionais: Record<string, Profissional> = {
     nome: "Leticia Brito Mota",
     cargo: "Neuropsicopedagoga e Aplicadora ABA",
     foto: leticiaBri,
+    foco: "50% 0%",
     area: "Neuropsicopedagogia",
     curriculo: [
       "Pós-graduada em Neuropsicopedagogia pela FAMEESP – Faculdade Metropolitana do Estado de São Paulo",
@@ -125,6 +130,7 @@ export const profissionais: Record<string, Profissional> = {
     nome: "Camilla da Silva Polo",
     cargo: "Neuropsicopedagoga",
     foto: camilaPolo,
+    foco: "50% 0%",
     area: "Neuropsicopedagogia",
     curriculo: [
       "Licenciatura em Pedagogia",
@@ -140,6 +146,7 @@ export const profissionais: Record<string, Profissional> = {
     nome: "Eduardo Henrique Hernandes",
     cargo: "Educador Físico",
     foto: eduardo,
+    foco: "50% 7%",
     area: "Educação Física",
     curriculo: [
       "Graduado em Educação Física pela Universidade de Franca",
@@ -152,6 +159,7 @@ export const profissionais: Record<string, Profissional> = {
     nome: "Maria Flávia Cazon",
     cargo: "Fisioterapeuta",
     foto: mariaFla,
+    foco: "50% 0%",
     area: "Fisioterapia",
     curriculo: [
       "Fisioterapeuta formada pelo Centro Universitário Claretiano",
@@ -191,6 +199,7 @@ export const profissionais: Record<string, Profissional> = {
     nome: "Josiane Teixeira",
     cargo: "Fonoaudióloga",
     foto: josiane,
+    foco: "50% 0%",
     area: "Fonoaudiologia",
     curriculo: [
       "Fonoaudióloga pela Universidade de Franca",
@@ -252,6 +261,7 @@ export const profissionais: Record<string, Profissional> = {
     nome: "Camila Fernandes",
     cargo: "Psicóloga",
     foto: camilaFer,
+    foco: "50% 0%",
     area: "Psicologia",
     curriculo: [
       "Psicóloga pela Universidade Municipal de Franca (Uni-FACEF)",
@@ -265,6 +275,7 @@ export const profissionais: Record<string, Profissional> = {
     nome: "Leticia Lirian Batista",
     cargo: "Psicóloga",
     foto: leticiaLirian,
+    foco: "50% 4%",
     area: "Psicologia",
     curriculo: [
       "Psicóloga pela Universidade de Franca",
@@ -276,6 +287,7 @@ export const profissionais: Record<string, Profissional> = {
     nome: "Camila Busqueiro",
     cargo: "Psicóloga",
     foto: camilaBusqueiro,
+    foco: "50% 1%",
     area: "Psicologia",
     curriculo: [
       "Psicóloga pela Universidade Municipal de Franca (Uni-FACEF)",
@@ -316,19 +328,6 @@ export const profissionais: Record<string, Profissional> = {
       "Psicólogo pela Universidade de Franca (Unifran)",
       "Treinamento em Acompanhamento Terapêutico no ambiente escolar",
       "Pós-graduação em andamento em ABA – Análise do Comportamento Aplicada (FAVENI)"
-    ]
-  },
-
-  rafael_musicoterapeuta: {
-    nome: "Rafael",
-    cargo: "Musicoterapeuta",
-    foto: rafael,
-    area: "Musicoterapia",
-    curriculo: [
-      "Musicoterapia pela Faculdade Metropolitana de Ribeirão Preto",
-      "Licenciando em Música pelo Conservatório Brasileiro de Música",
-      "Aplicador ABA pelo CBI of Miami",
-      "Professor particular de canto e piano"
     ]
   },
 

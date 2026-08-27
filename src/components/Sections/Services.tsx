@@ -15,7 +15,6 @@ import Reveal from "../Reveal"
 const specialties = [
   { title: "Psicologia", slug: "psicologia", icon: Brain },
   { title: "ABA – Análise do Comportamento Aplicada", slug: "aba", icon: Activity },
-  { title: "Acompanhamento Terapêutico (AT)", slug: "acompanhamento-terapeutico", icon: Book },
   { title: "Fonoaudiologia", slug: "fonoaudiologia", icon: MessageCircle },
   { title: "Laserterapia", slug: "laserterapia", icon: Sparkles },
   { title: "Neuromodulação", slug: "neuromodulacao", icon: Zap },

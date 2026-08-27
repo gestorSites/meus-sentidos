@@ -14,18 +14,18 @@ import clinicImg12 from "../../assets/historia/his-12.webp"
 import ImageCarousel from "../ImageCarousel"
 export default function About() {
   const imgList = [
-    clinicImg1,
-    clinicImg2,
-    clinicImg3,
-    clinicImg4,
-    clinicImg5,
-    clinicImg6,
-    clinicImg7,
-    clinicImg8,
-    clinicImg9,
-    clinicImg10,
-    clinicImg11,
-    clinicImg12
+    { src: clinicImg1, alt: "Fachada da Clínica Meus Sentidos, com a placa da clínica e o jardim na entrada." },
+    { src: clinicImg2, alt: "Recepção ampla e iluminada, com pé-direito alto, escada e poltronas de espera." },
+    { src: clinicImg3, alt: "Sala de espera com poltronas de couro caramelo e divisória de vidro." },
+    { src: clinicImg4, alt: "Sala de atividades com parede colorida, painel de comunicação alternativa e armários." },
+    { src: clinicImg5, alt: "Sala de reunião com mesa de madeira, poltronas e quadros na parede." },
+    { src: clinicImg6, alt: "Sala de Integração Sensorial com balanços suspensos, rede e tatame azul." },
+    { src: clinicImg7, alt: "Sala de terapias com bolas suíças, espaldar e equipamentos de reabilitação." },
+    { src: clinicImg8, alt: "Quadra externa de grama sintética, com traves e palmeiras ao redor." },
+    { src: clinicImg9, alt: "Área da piscina, com deck em pedra e cerca de proteção." },
+    { src: clinicImg10, alt: "Sala de atendimento com parede colorida, mesa e cadeiras de madeira." },
+    { src: clinicImg11, alt: "Copa com mesa, cadeiras amarelas e armários planejados." },
+    { src: clinicImg12, alt: "Sala de atendimento com mesa, cadeiras e piso azul." }
   ]
   return (
     <section id="sobre" className="py-24 bg-white scroll-mt-24">

@@ -5,8 +5,13 @@ import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 
+type CarouselImage = {
+  src: string
+  alt: string
+}
+
 type ImageCarouselProps = {
-  images: string[]
+  images: CarouselImage[]
   height?: string
 }
 
@@ -26,8 +31,8 @@ export default function ImageCarousel({
         <SwiperSlide key={index}>
           <div className="overflow-hidden">
             <img
-              src={img}
-              alt="Imagem"
+              src={img.src}
+              alt={img.alt}
               loading="lazy"
               style={{ height }}
               className="w-full object-cover transition duration-700 hover:scale-105 cursor-grab"

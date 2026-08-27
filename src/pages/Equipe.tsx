@@ -47,7 +47,7 @@ export default function EquipePage() {
                     src={prof.foto}
                     alt={prof.nome}
                     loading="lazy"
-                    className="w-full aspect-square object-cover rounded-xl shadow-md group-hover:scale-105 transition"
+                    className="w-full aspect-[4/5] object-cover rounded-xl shadow-md group-hover:scale-105 transition"
                   />
 
                   <h3 className="mt-4 font-semibold text-lg">

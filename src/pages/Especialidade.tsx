@@ -76,6 +76,7 @@ export default function EspecialidadesPage() {
                     src={img}
                     loading="lazy"
                     className="rounded-xl object-cover w-full aspect-[3/2] transition-all duration-300 hover:scale-105"
+                    style={{ objectPosition: especialidade.foco }}
                   />
                 </Reveal>
               ))}

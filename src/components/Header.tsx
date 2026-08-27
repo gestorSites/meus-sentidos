@@ -18,7 +18,6 @@ const menu = [
 const specialties = [
     { label: "Psicologia", href: "/especialidades#psicologia" },
     { label: "ABA", href: "/especialidades#aba" },
-    { label: "Acompanhamento Terapêutico", href: "/especialidades#acompanhamento-terapeutico" },
     { label: "Fonoaudiologia", href: "/especialidades#fonoaudiologia" },
     { label: "Laserterapia", href: "/especialidades#laserterapia" },
     { label: "Neuromodulação", href: "/especialidades#neuromodulacao" },

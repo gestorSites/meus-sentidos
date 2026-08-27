@@ -3,9 +3,10 @@ type TeamCardProps = {
   role: string
   description?: string
   image: string
+  foco?: string
 }
 
-export default function TeamCard({ name, role, image }: TeamCardProps) {
+export default function TeamCard({ name, role, image, foco }: TeamCardProps) {
   return (
     <div className="bg-white rounded-xl shadow p-6 text-center h-full">
       <img
@@ -13,6 +14,7 @@ export default function TeamCard({ name, role, image }: TeamCardProps) {
         alt={name}
         loading="lazy"
         className="w-24 h-24 mx-auto rounded-full object-cover mb-4"
+        style={{ objectPosition: foco }}
       />
 
       <h3 className="font-semibold text-[#1177E3]">{name}</h3>
