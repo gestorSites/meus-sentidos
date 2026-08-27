@@ -44,14 +44,21 @@ e fale com quem desenvolveu o site: é preciso gerar outro pacote.
 
 ## 3. A regra de reescrita (a parte que mais dá problema)
 
+> **Não pule esta seção.** Sem a regra descrita aqui, as páginas internas ainda
+> abrem normalmente para quem visita — mas o servidor as entrega com o código
+> de erro **HTTP 404**, e por isso o Google não indexa nenhuma delas. É uma
+> falha silenciosa: navegando pelo site parece estar tudo certo, e mesmo assim
+> o cliente perde a busca orgânica de todas as páginas internas.
+
 Este site tem endereços internos: `/profissionais`, `/empresas`, `/links`,
 `/profissionais/lara_marra` e outros. Essas pastas **não existem** no servidor
 — quem monta essas páginas é o próprio site, no navegador.
 
 Por isso o servidor precisa ser instruído a entregar o `index.html` para
-qualquer endereço que não seja um arquivo real. **Sem essa regra, só a página
-inicial funciona.** Abrir `/profissionais` direto na barra de endereço, ou dar
-F5 numa página interna, retorna erro 404.
+qualquer endereço que não seja um arquivo real. Sem essa regra, abrir
+`/profissionais` direto na barra de endereço (ou dar F5 numa página interna)
+faz o servidor responder 404: a página aparece na tela, porque o `404.html`
+entra em ação, mas o código de erro continua sendo enviado.
 
 Escolha o arquivo conforme o servidor:
 
@@ -131,4 +138,8 @@ novo** — não adianta editar os arquivos à mão, é fácil deixar passar algu
 
 Nesse caso, procure quem desenvolveu o site e peça um novo pacote.
 
-> Contato do responsável técnico: `_______________________`
+> **Responsável técnico:** Lucas Natalicio Ferreira — lucasnf99@gmail.com
+
+Dúvidas técnicas sobre a hospedagem — regra de reescrita, certificado,
+redirecionamento de domínio, qualquer item deste documento — devem ser enviadas
+**por e-mail**, para o endereço acima.
