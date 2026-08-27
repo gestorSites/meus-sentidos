@@ -31,14 +31,17 @@ o site já está compilado, são arquivos estáticos.
 Todos os arquivos vão na **raiz do domínio**, ou seja, em
 `https://www.meussentidos.com.br` — e **não** dentro de uma subpasta.
 
-Na prática: o conteúdo do ZIP vai direto na pasta pública do servidor
-(`public_html`, `www`, `htdocs` ou `wwwroot`, dependendo da hospedagem).
+Na prática: extraia o ZIP e envie **o conteúdo dele** para a pasta pública do
+servidor (`public_html`, `www`, `htdocs` ou `wwwroot`, dependendo da
+hospedagem). Não crie uma subpasta com o nome do arquivo ZIP — o `index.html`
+tem que ficar solto na pasta pública, junto com a pasta `assets/`.
 
 Ao final, `index.html` precisa responder em
 `https://www.meussentidos.com.br/index.html`. Se ele acabar em
 `.../site/index.html` ou `.../meus-sentidos/index.html`, **o site não vai
-funcionar** — os caminhos internos foram gerados para a raiz. Nesse caso, pare
-e fale com quem desenvolveu o site: é preciso gerar outro pacote.
+funcionar** — os caminhos internos foram gerados para a raiz. O sintoma típico
+é a **página abrir totalmente em branco**. Nesse caso, pare e fale com quem
+desenvolveu o site: é preciso gerar outro pacote.
 
 ---
 
@@ -48,7 +51,7 @@ e fale com quem desenvolveu o site: é preciso gerar outro pacote.
 > abrem normalmente para quem visita — mas o servidor as entrega com o código
 > de erro **HTTP 404**, e por isso o Google não indexa nenhuma delas. É uma
 > falha silenciosa: navegando pelo site parece estar tudo certo, e mesmo assim
-> o cliente perde a busca orgânica de todas as páginas internas.
+> nenhuma página interna aparece nas buscas do Google.
 
 Este site tem endereços internos: `/profissionais`, `/empresas`, `/links`,
 `/profissionais/lara_marra` e outros. Essas pastas **não existem** no servidor
@@ -66,9 +69,14 @@ Escolha o arquivo conforme o servidor:
 |---|---|
 | **Apache** (cPanel, Plesk, hospedagem compartilhada) | Deixe o `.htaccess` na mesma pasta do `index.html`. Já está pronto. Precisa do módulo `mod_rewrite` ativo. |
 | **IIS / Windows Server** | Deixe o `web.config` na mesma pasta do `index.html`. Precisa do módulo **URL Rewrite** instalado. |
-| **nginx** | O `nginx.conf.exemplo` **não funciona sozinho**. Abra-o, copie o bloco `location / { try_files ... }` para dentro do `server { }` que já atende o domínio, e recarregue: `nginx -t && systemctl reload nginx`. |
+| **nginx** | O `nginx.conf.exemplo` **não funciona sozinho**. Abra-o, copie o bloco `location / { try_files ... }` para dentro do `server { }` que já atende o domínio, e recarregue: `nginx -t && systemctl reload nginx` (ou o comando equivalente na sua distribuição). |
 
 Os arquivos que não forem do seu servidor podem ser apagados sem problema.
+
+**Não sabe qual é o seu caso?** Hospedagem compartilhada com cPanel ou Plesk em
+Linux é quase sempre **Apache**. Servidor Windows é **IIS**. Em um servidor
+Linux próprio (VPS), `nginx -v` ou `apache2 -v` no terminal responde qual dos
+dois está instalado. Na dúvida, o suporte da hospedagem informa.
 
 ### Se o painel não permitir nenhuma dessas opções
 
@@ -77,8 +85,8 @@ visitante, porque o servidor entrega o `404.html` (que é uma cópia do site) e 
 site corrige o endereço sozinho.
 
 É uma solução **parcial**: essas páginas continuam respondendo com o código de
-erro 404, e por causa disso o Google não vai indexá-las. O site funciona para
-quem visita, mas perde busca orgânica nas páginas internas.
+erro 404 e, por causa disso, não aparecem nas buscas do Google. O site funciona
+para quem visita, mas só a página inicial é encontrada pelo buscador.
 
 Então: use como último recurso, e vale insistir com o suporte da hospedagem
 para liberar a reescrita.
@@ -90,8 +98,8 @@ regra de reescrita falhe ou seja removida numa migração futura.
 
 ## 4. Domínio sem www
 
-`meussentidos.com.br` (sem www) precisa **redirecionar com 301** para
-`https://www.meussentidos.com.br`.
+`meussentidos.com.br` (sem www) precisa **redirecionar com 301**
+(redirecionamento permanente) para `https://www.meussentidos.com.br`.
 
 O site declara internamente que seu endereço oficial é o **com www**. Se os
 dois endereços responderem com o conteúdo, o Google vê o mesmo site em dois
@@ -112,10 +120,23 @@ emitido pelo próprio painel (Let's Encrypt).
 ## 5. Checklist — confira depois de subir
 
 1. **`https://www.meussentidos.com.br`** abre e as fotos aparecem.
-2. **Digite `https://www.meussentidos.com.br/profissionais` direto na barra de
-   endereço** (não vale clicar no menu) e aperte Enter. Precisa abrir a página
-   "Nossa Equipe". *Se der erro 404, a regra de reescrita do item 3 não está
-   ativa.*
+2. **Este é o item mais importante: é o único que revela se a regra de
+   reescrita do item 3 está ativa.** Olhar a tela não resolve — por causa do
+   `404.html`, a página abre igual nos dois casos. É preciso ver o **código de
+   resposta** que o servidor manda:
+
+   - Abra `https://www.meussentidos.com.br/profissionais` no Chrome ou no Edge.
+   - Aperte **F12** (abre o painel do desenvolvedor, na lateral ou embaixo).
+   - Clique na aba **Network** (em português, "Rede") e aperte **F5**.
+   - Na lista que aparecer, olhe a **primeira linha** — a chamada
+     `profissionais` — na coluna **Status**.
+
+   **200** significa configurado corretamente. **404** significa que a regra de
+   reescrita não está ativa: volte ao item 3.
+
+   Se preferir a linha de comando, o mesmo teste é:
+   `curl -I https://www.meussentidos.com.br/profissionais` — a primeira linha
+   da resposta precisa conter `200`, e não `404`.
 3. Abra `https://www.meussentidos.com.br/profissionais/lara_marra` e aperte
    **F5**. Precisa continuar na ficha da profissional.
 4. Abra `https://www.meussentidos.com.br/og-image.jpg`. Precisa aparecer uma
@@ -123,8 +144,6 @@ emitido pelo próprio painel (Let's Encrypt).
    subiu.
 5. Abra `https://meussentidos.com.br` (**sem** www). Precisa redirecionar
    sozinho para o endereço com www.
-
-O item 2 é o mais importante: é ele que revela se a reescrita está funcionando.
 
 ---
 
