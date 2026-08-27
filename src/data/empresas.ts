@@ -27,7 +27,7 @@ export const empresas: Record<string, ServicoEmpresa> = {
   analise_ergonomica: {
     titulo: "Análise Ergonômica",
     imagem: analiseErgonomica,
-    foco: "50% 25%",
+    foco: "50% 38%",
     descricao:
       "A Análise Ergonômica visa identificar os principais problemas do ambiente de trabalho por meio de avaliação qualitativa e quantitativa, permitindo a elaboração de um Plano de Ação voltado à prevenção de riscos, à promoção da saúde ocupacional e à melhoria das condições laborais, em conformidade com a NR17 e seu Manual de Aplicação, com validade técnica e legal.",
     etapas: [
@@ -43,7 +43,7 @@ export const empresas: Record<string, ServicoEmpresa> = {
   assessoria_ergonomia: {
     titulo: "Assessoria em Ergonomia",
     imagem: assessoriaErgonomia,
-    foco: "50% 25%",
+    foco: "50% 36%",
     descricao:
       "Oferecemos assessoria técnica especializada em Ergonomia, acompanhando a implementação dos preceitos legais e orientando as áreas envolvidas, como saúde, engenharia e segurança do trabalho. Atuamos de forma personalizada e integrada à realidade de cada empresa, com serviços que incluem Análise Ergonômica do Trabalho, treinamentos, estruturação do processo ergonômico, elaboração e acompanhamento de planos de ação, com monitoramento contínuo por indicadores.",
   },
@@ -59,7 +59,7 @@ export const empresas: Record<string, ServicoEmpresa> = {
   palestras_treinamentos: {
     titulo: "Palestras e Treinamentos",
     imagem: palestrasTreinamentos,
-    foco: "50% 25%",
+    foco: "50% 50%",
     descricao:
       "Os treinamentos ministrados por nós são desenvolvidos de acordo com as necessidades da empresa e do público-alvo, estando alinhados e constantemente atualizados em função das novas tecnologias, pesquisas e avanços do conhecimento.",
   },

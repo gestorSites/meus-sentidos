@@ -176,7 +176,7 @@ nas atividades do dia a dia.
     imagens: [
       integracao
     ],
-    foco: "50% 75%"
+    foco: "50% 68%"
   },
 
   fisioterapia: {
@@ -288,7 +288,7 @@ de vínculos por meio da experiência musical.
     imagens: [
       music
     ],
-    foco: "50% 70%"
+    foco: "50% 67%"
   }
 }
 export type EspecialidadeSlug = keyof typeof especialidades

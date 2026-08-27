@@ -9,7 +9,7 @@ import HeroCarousel from "./HeroCarousel"
 const banners = [
   {
     src: banner1,
-    alt: "Criança sorrindo ao lado de fotos das salas da clínica, com o texto: Uma clínica completa para você e sua família — acompanhamento terapêutico individualizado para cada fase do desenvolvimento.",
+    alt: "Criança sorrindo ao lado de fotos das salas da clínica, com o texto: Uma clínica completa para você e sua família — plano terapêutico individualizado para cada fase do desenvolvimento.",
   },
   {
     src: banner2,
