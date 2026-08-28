@@ -13,7 +13,6 @@ const menu = [
     { label: "Profissionais", href: "/profissionais" },
     { label: "FAQ", id: "faq" },
     { label: "Contato", id: "contato" },
-    { label: "Avaliações", href: "/avaliacoes" },
 ]
 const specialties = [
     { label: "Psicologia", href: "/especialidades#psicologia" },
