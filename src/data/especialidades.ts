@@ -273,15 +273,12 @@ segurança e eficácia no processo de treinamento.
     titulo: "Musicoterapia",
     descricao: `
 A Musicoterapia é uma prática terapêutica reconhecida que utiliza
-a música e seus elementos — ritmo, melodia, harmonia e som —
-como instrumentos de intervenção.
-
-Atua na estimulação cognitiva, comunicação, expressão emocional,
-interação social e regulação comportamental.
-
-O trabalho é estruturado a partir de objetivos terapêuticos
-individualizados, promovendo desenvolvimento e fortalecimento
-de vínculos por meio da experiência musical.
+a música e seus elementos, como ritmo, melodia, harmonia e som,
+como instrumentos de intervenção. Atua na estimulação cognitiva,
+comunicação, expressão emocional, interação social e regulação
+comportamental. O trabalho é estruturado a partir de objetivos
+terapêuticos individualizados, promovendo desenvolvimento e
+fortalecimento de vínculos por meio da experiência musical.
 `,
     imagens: [
       music
