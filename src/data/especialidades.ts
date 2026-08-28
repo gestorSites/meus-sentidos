@@ -228,13 +228,11 @@ estabilidade, coordenação e funcionalidade global.
   "terapia-aquatica": {
     titulo: "Terapia Aquática",
     descricao: `
-A Terapia Aquática utiliza as propriedades físicas da água — como
-flutuação, resistência e pressão hidrostática — para potencializar
-ganhos motores, respiratórios e sensoriais.
-
-O ambiente aquático favorece movimentos com menor impacto,
-promovendo relaxamento, fortalecimento muscular e ampliação das
-habilidades funcionais.
+A Terapia Aquática utiliza as propriedades físicas da água, como
+flutuação, resistência e pressão hidrostática, para potencializar
+ganhos motores, respiratórios e sensoriais. O ambiente aquático
+favorece movimentos com menor impacto, promovendo relaxamento,
+fortalecimento muscular e ampliação das habilidades funcionais.
 `,
     imagens: [
       terapAq
