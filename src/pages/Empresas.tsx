@@ -103,7 +103,7 @@ export default function EmpresasPage() {
                       src={servico.imagem}
                       alt={servico.titulo}
                       loading="lazy"
-                      className="rounded-2xl object-cover w-full aspect-[5/4] shadow-sm transition-all duration-300 hover:scale-105"
+                      className="rounded-2xl object-cover w-full aspect-[4/3] shadow-sm transition-all duration-300 hover:scale-105"
                       style={{ objectPosition: servico.foco }}
                     />
                   </Reveal>
