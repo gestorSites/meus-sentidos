@@ -12,11 +12,10 @@ const FALLBACK_SITE_URL = 'https://www.meussentidos.com.br'
 const SITE_URL_TOKEN = '__SITE_URL__'
 
 // Rotas concretas de src/router.tsx. /profissionais/:slug não entra aqui porque
-// é um padrão, não uma URL — as 24 fichas são expandidas a partir dos dados.
+// é um padrão, não uma URL — as 23 fichas são expandidas a partir dos dados.
 const ROTAS_ESTATICAS = [
   '/',
   '/especialidades',
-  '/avaliacoes',
   '/profissionais',
   '/empresas',
   '/links',

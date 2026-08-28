@@ -103,7 +103,7 @@ O build recusa valores sem `http://` ou `https://`.
 ```
 src/
   router.tsx          rotas (o basename vem de import.meta.env.BASE_URL)
-  data/               profissionais, especialidades, avaliações, empresas
+  data/               profissionais, especialidades, empresas
   pages/              uma página por rota
   components/         componentes e seções da home
   assets/             imagens importadas pelo bundle
