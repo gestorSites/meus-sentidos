@@ -57,7 +57,7 @@ export default function EmpresasPage() {
                 </Reveal>
 
                 <Reveal delay={0.1}>
-                  <p className="text-gray-700 leading-relaxed mb-6">
+                  <p className="text-gray-700 leading-relaxed mb-6 text-justify">
                     {servico.descricao}
                   </p>
                 </Reveal>
@@ -125,7 +125,7 @@ export default function EmpresasPage() {
                       <h3 className="inline-block bg-[#1177E3] text-white px-3 py-1 rounded-lg text-sm font-semibold mb-3">
                         {sub.titulo}
                       </h3>
-                      <p className="text-gray-700 text-sm leading-relaxed">
+                      <p className="text-gray-700 text-sm leading-relaxed text-justify">
                         {sub.descricao}
                       </p>
                     </div>

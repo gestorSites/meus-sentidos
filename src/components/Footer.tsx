@@ -25,7 +25,7 @@ export default function Footer() {
             />
           </Reveal>
           <Reveal delay={0.4}>
-            <p className="mt-4 text-sm">
+            <p className="mt-4 text-sm text-justify">
               Cuidado especializado para crianças e adolescentes com TEA. Atendimento humanizado, individualizado e baseado em evidências.
             </p>
 

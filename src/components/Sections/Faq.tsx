@@ -57,7 +57,7 @@ Nosso horário de atendimento é de segunda a sexta-feira, das 07h às 17h45, e 
             {faqs.map((item, i) => (
               <Reveal key={item.title} delay={i * 0.06}>
                 <Accordion key={item.title} title={item.title}>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-600 leading-relaxed text-justify">
                     {item.content}
                   </p>
                 </Accordion>

@@ -16,11 +16,11 @@ export default function ContactSection() {
                 Comece agora um acompanhamento especializado
               </h2>
 
-              <p className="text-white/90 mb-4">
+              <p className="text-white/90 mb-4 text-justify">
                 Preencha o formulário para agendar uma conversa inicial sem compromisso.
               </p>
 
-              <p className="text-white/80 text-sm leading-relaxed">
+              <p className="text-white/80 text-sm leading-relaxed text-justify">
                 Vamos entender suas necessidades e mostrar como a Meus Sentidos
                 pode fazer a diferença no futuro da sua família.
               </p>

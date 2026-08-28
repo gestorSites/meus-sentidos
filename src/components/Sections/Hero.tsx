@@ -32,7 +32,7 @@ export default function Hero() {
             </Reveal>
 
             <Reveal delay={0.2}>
-              <p className="mt-6 text-lg text-gray-700">
+              <p className="mt-6 text-lg text-gray-700 text-justify">
                 A Clínica Meus Sentidos oferece atendimento humanizado, individualizado e
                 fundamentado em evidências científicas. Nosso cuidado é voltado para pessoas em
                 diferentes fases da vida, considerando suas necessidades, particularidades e promovendo

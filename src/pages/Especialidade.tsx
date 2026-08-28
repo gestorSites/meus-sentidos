@@ -54,12 +54,12 @@ export default function EspecialidadesPage() {
                 </Reveal>
               )}
 
-              <p className="text-gray-700 leading-relaxed mb-6 text-justify hyphens-auto">
+              <p className="text-gray-700 leading-relaxed mb-6 text-justify">
                 {especialidade.descricao}
               </p>
 
               {especialidade.beneficios && (
-                <ul className="list-disc list-inside space-y-2 text-gray-700 text-justify hyphens-auto">
+                <ul className="list-disc list-inside space-y-2 text-gray-700 text-justify">
                   {especialidade.beneficios.map((beneficio, i) => (
                     <li key={i}>{beneficio}</li>
                   ))}

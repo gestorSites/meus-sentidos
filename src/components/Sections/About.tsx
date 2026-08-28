@@ -57,7 +57,7 @@ export default function About() {
               <h3 className="text-xl font-semibold text-[#1177E3] mb-3">
                 Um propósito que nasceu do cuidado
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed text-justify">
                 Fundada há 10 anos por Francielly Caroline, terapeuta ocupacional,
                 a Clínica Meus Sentidos surgiu com o desejo genuíno de acolher
                 famílias e oferecer um cuidado verdadeiramente integral,
@@ -69,7 +69,7 @@ export default function About() {
               <h3 className="text-xl font-semibold text-[#1177E3] mb-3">
                 Atendimento integrado em um só lugar
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed text-justify">
                 Reunimos diferentes especialidades que dialogam entre si,
                 favorecendo um atendimento alinhado, eficaz e acolhedor,
                 fortalecendo vínculos e proporcionando um ambiente seguro
@@ -81,7 +81,7 @@ export default function About() {
               <h3 className="text-xl font-semibold text-[#1177E3] mb-3">
                 Crescimento com essência
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed text-justify">
                 Ao longo dos anos crescemos em estrutura e conhecimento,
                 mas mantivemos nossa essência: desenvolvimento é presença,
                 escuta, amor e ciência caminhando juntas.

@@ -51,7 +51,7 @@ export default function ProfissionalPage() {
               </h2>
             </Reveal>
 
-            <ul className="space-y-3 text-gray-700 leading-relaxed">
+            <ul className="space-y-3 text-gray-700 leading-relaxed text-justify">
               {profissional.curriculo.map((item, i) => (
                 <Reveal key={i} delay={0.3 + i * 0.05}>
                   <li className="list-disc list-inside">
