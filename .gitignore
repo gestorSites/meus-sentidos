@@ -27,3 +27,6 @@ dist-ssr
 .env
 .env.*
 !.env.example
+
+# pacote de entrega gerado por npm run build:entrega
+meus-sentidos-site.zip
